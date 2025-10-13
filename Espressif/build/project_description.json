@@ -1,7 +1,7 @@
 {
     "version":            "1.2",
     "project_name":       "Espressif",
-    "project_version":    "623c427",
+    "project_version":    "2e71cc7-dirty",
     "project_path":       "/home/t70n/Documents/Corto-Densimeter/Espressif",
     "idf_path":           "/home/t70n/esp/v5.5.1/esp-idf",
     "build_dir":          "/home/t70n/Documents/Corto-Densimeter/Espressif/build",
@@ -370,7 +370,7 @@
             "managed_reqs": [],
             "managed_priv_reqs": [],
             "file": "/home/t70n/Documents/Corto-Densimeter/Espressif/build/esp-idf/main/libmain.a",
-            "sources": [ "/home/t70n/Documents/Corto-Densimeter/Espressif/main/hello_world_main.c" ],
+            "sources": [ "/home/t70n/Documents/Corto-Densimeter/Espressif/main/densimeter_main.c", "/home/t70n/Documents/Corto-Densimeter/Espressif/main/hello_world_main.c" ],
             "include_dirs": []
         },
         "mbedtls": {
