@@ -2,7 +2,7 @@
 
 DIY densimeter for Corto Brewery use cases.
 
-# ===[ Espressif IDF - ESP32-C6 ]==================================
+# ===[ Espressif IDF - ESP32-C6 ]===
 
 ---
 
