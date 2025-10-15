@@ -1,3 +1,5 @@
-idf_component_register(SRCS "densimeter_main.c" "hello_world_main.c"
-                       PRIV_REQUIRES spi_flash
-                       INCLUDE_DIRS "")
+idf_component_register(
+    SRCS "densimeter_main.c"        # Fichiers sources
+    INCLUDE_DIRS "."                # Répertoire d'inclusion
+    REQUIRES driver                 # Déclare la dépendance au composant "driver" (pour I2C)
+)

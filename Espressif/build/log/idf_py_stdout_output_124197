@@ -1,0 +1,3182 @@
+Command: /home/t70n/.espressif/python_env/idf5.5_py3.12_env/bin/python /home/t70n/esp/v5.5.1/esp-idf/tools/idf_monitor.py -p /dev/ttyACM0 -b 115200 --toolchain-prefix riscv32-esp-elf- --target esp32c6 --revision 0 --decode-panic backtrace /home/t70n/Documents/Corto-Densimeter/Espressif/build/Espressif.elf /home/t70n/Documents/Corto-Densimeter/Espressif/build/bootloader/bootloader.elf -m '/home/t70n/.espressif/python_env/idf5.5_py3.12_env/bin/python' '/home/t70n/esp/v5.5.1/esp-idf/tools/idf.py' '-p' '/dev/ttyACM0'
+ESP-ROM:esp32c6-20220919
+Build:Sep 19 2022
+rst:0x15 (USB_UART_HPSYS),boot:0x6f (SPI_FAST_FLASH_BOOT)
+Saved PC:0x40802954
+SPIWP:0xee
+mode:DIO, clock div:2
+load:0x40875730,len:0x1744
+load:0x4086b910,len:0xe78
+load:0x4086e610,len:0x31c8
+entry 0x4086b91a
+[0;32mI (23) boot: ESP-IDF v5.5.1-dirty 2nd stage bootloader[0m
+[0;32mI (23) boot: compile time Oct 15 2025 18:17:57[0m
+[0;32mI (24) boot: chip revision: v0.2[0m
+[0;32mI (24) boot: efuse block revision: v0.3[0m
+[0;32mI (27) boot.esp32c6: SPI Speed      : 80MHz[0m
+[0;32mI (31) boot.esp32c6: SPI Mode       : DIO[0m
+[0;32mI (35) boot.esp32c6: SPI Flash Size : 2MB[0m
+[0;32mI (38) boot: Enabling RNG early entropy source...[0m
+[0;32mI (43) boot: Partition Table:[0m
+[0;32mI (45) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (52) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (58) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (65) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (71) boot: End of partition table[0m
+[0;32mI (75) esp_image: segment 0: paddr=00010020 vaddr=42018020 size=07aach ( 31404) map[0m
+[0;32mI (88) esp_image: segment 1: paddr=00017ad4 vaddr=40800000 size=00544h (  1348) load[0m
+[0;32mI (90) esp_image: segment 2: paddr=00018020 vaddr=42000020 size=114a4h ( 70820) map[0m
+[0;32mI (110) esp_image: segment 3: paddr=000294cc vaddr=40800544 size=0a9d0h ( 43472) load[0m
+[0;32mI (120) esp_image: segment 4: paddr=00033ea4 vaddr=4080af20 size=015d4h (  5588) load[0m
+[0;32mI (125) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (125) boot: Disabling RNG early entropy source...[0m
+[0;32mI (138) cpu_start: Unicore app[0m
+[0;32mI (146) cpu_start: Pro cpu start user code[0m
+[0;32mI (147) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (147) app_init: Application information:[0m
+[0;32mI (147) app_init: Project name:     Espressif[0m
+[0;32mI (151) app_init: App version:      12c14e0-dirty[0m
+[0;32mI (155) app_init: Compile time:     Oct 15 2025 18:17:32[0m
+[0;32mI (160) app_init: ELF file SHA256:  4d32b4cd7...[0m
+[0;32mI (164) app_init: ESP-IDF:          v5.5.1-dirty[0m
+[0;32mI (169) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (173) efuse_init: Max chip rev:     v0.99 [0m
+[0;32mI (177) efuse_init: Chip rev:         v0.2[0m
+[0;32mI (180) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (187) heap_init: At 4080D3F0 len 0006F220 (444 KiB): RAM[0m
+[0;32mI (192) heap_init: At 4087C610 len 00002F54 (11 KiB): RAM[0m
+[0;32mI (197) heap_init: At 50000000 len 00003FE8 (15 KiB): RTCRAM[0m
+[0;32mI (203) spi_flash: detected chip: generic[0m
+[0;32mI (206) spi_flash: flash io: dio[0m
+[0;33mW (209) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (221) sleep_gpio: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (228) sleep_gpio: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (234) main_task: Started on CPU0[0m
+[0;32mI (234) main_task: Calling app_main()[0m
+
+Scanning I2C bus...
+Device found at address: 0x01
+Device found at address: 0x02
+Device found at address: 0x03
+Device found at address: 0x04
+Device found at address: 0x05
+Device found at address: 0x06
+Device found at address: 0x07
+Device found at address: 0x08
+Device found at address: 0x09
+Device found at address: 0x0A
+Device found at address: 0x0B
+Device found at address: 0x0C
+Device found at address: 0x0D
+Device found at address: 0x0E
+Device found at address: 0x0F
+Device found at address: 0x10
+Device found at address: 0x11
+Device found at address: 0x12
+Device found at address: 0x13
+Device found at address: 0x14
+Device found at address: 0x15
+Device found at address: 0x16
+Device found at address: 0x17
+Device found at address: 0x18
+Device found at address: 0x19
+Device found at address: 0x1A
+Device found at address: 0x1B
+Device found at address: 0x1C
+Device found at address: 0x1D
+Device found at address: 0x1E
+Device found at address: 0x1F
+Device found at address: 0x20
+Device found at address: 0x21
+Device found at address: 0x22
+Device found at address: 0x23
+Device found at address: 0x24
+Device found at address: 0x25
+Device found at address: 0x26
+Device found at address: 0x27
+Device found at address: 0x28
+Device found at address: 0x29
+Device found at address: 0x2A
+Device found at address: 0x2B
+Device found at address: 0x2C
+Device found at address: 0x2D
+Device found at address: 0x2E
+Device found at address: 0x2F
+Device found at address: 0x30
+Device found at address: 0x31
+Device found at address: 0x32
+Device found at address: 0x33
+Device found at address: 0x34
+Device found at address: 0x35
+Device found at address: 0x36
+Device found at address: 0x37
+Device found at address: 0x38
+Device found at address: 0x39
+Device found at address: 0x3A
+Device found at address: 0x3B
+Device found at address: 0x3C
+Device found at address: 0x3D
+Device found at address: 0x3E
+Device found at address: 0x3F
+Device found at address: 0x40
+Device found at address: 0x41
+Device found at address: 0x42
+Device found at address: 0x43
+Device found at address: 0x44
+Device found at address: 0x45
+Device found at address: 0x46
+Device found at address: 0x47
+Device found at address: 0x48
+Device found at address: 0x49
+Device found at address: 0x4A
+Device found at address: 0x4B
+Device found at address: 0x4C
+Device found at address: 0x4D
+Device found at address: 0x4E
+Device found at address: 0x4F
+Device found at address: 0x50
+Device found at address: 0x51
+Device found at address: 0x52
+Device found at address: 0x53
+Device found at address: 0x54
+Device found at address: 0x55
+Device found at address: 0x56
+Device found at address: 0x57
+Device found at address: 0x58
+Device found at address: 0x59
+Device found at address: 0x5A
+Device found at address: 0x5B
+Device found at address: 0x5C
+Device found at address: 0x5D
+Device found at address: 0x5E
+Device found at address: 0x5F
+Device found at address: 0x60
+Device found at address: 0x61
+Device found at address: 0x62
+Device found at address: 0x63
+Device found at address: 0x64
+Device found at address: 0x65
+Device found at address: 0x66
+Device found at address: 0x67
+Device found at address: 0x68
+Device found at address: 0x69
+Device found at address: 0x6A
+Device found at address: 0x6B
+Device found at address: 0x6C
+Device found at address: 0x6D
+Device found at address: 0x6E
+Device found at address: 0x6F
+Device found at address: 0x70
+Device found at address: 0x71
+Device found at address: 0x72
+Device found at address: 0x73
+Device found at address: 0x74
+Device found at address: 0x75
+Device found at address: 0x76
+Device found at address: 0x77
+Device found at address: 0x78
+Device found at address: 0x79
+Device found at address: 0x7A
+Device found at address: 0x7B
+Device found at address: 0x7C
+Device found at address: 0x7D
+Device found at address: 0x7E
+Bouton pressé : reboot dans 1 seconde...
+ESP-ROM:esp32c6-20220919
+Build:Sep 19 2022
+rst:0xc (SW_CPU),boot:0x6f (SPI_FAST_FLASH_BOOT)
+Saved PC:0x4001975a
+SPIWP:0xee
+mode:DIO, clock div:2
+load:0x40875730,len:0x1744
+load:0x4086b910,len:0xe78
+load:0x4086e610,len:0x31c8
+entry 0x4086b91a
+[0;32mI (22) boot: ESP-IDF v5.5.1-dirty 2nd stage bootloader[0m
+[0;32mI (22) boot: compile time Oct 15 2025 18:17:57[0m
+[0;32mI (24) boot: chip revision: v0.2[0m
+[0;32mI (24) boot: efuse block revision: v0.3[0m
+[0;32mI (26) boot.esp32c6: SPI Speed      : 80MHz[0m
+[0;32mI (30) boot.esp32c6: SPI Mode       : DIO[0m
+[0;32mI (34) boot.esp32c6: SPI Flash Size : 2MB[0m
+[0;32mI (37) boot: Enabling RNG early entropy source...[0m
+[0;32mI (42) boot: Partition Table:[0m
+[0;32mI (44) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (51) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (57) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (64) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (70) boot: End of partition table[0m
+[0;32mI (74) esp_image: segment 0: paddr=00010020 vaddr=42018020 size=07aach ( 31404) map[0m
+[0;32mI (93) esp_image: segment 1: paddr=00017ad4 vaddr=40800000 size=00544h (  1348) load[0m
+[0;32mI (95) esp_image: segment 2: paddr=00018020 vaddr=42000020 size=114a4h ( 70820) map[0m
+[0;32mI (123) esp_image: segment 3: paddr=000294cc vaddr=40800544 size=0a9d0h ( 43472) load[0m
+[0;32mI (143) esp_image: segment 4: paddr=00033ea4 vaddr=4080af20 size=015d4h (  5588) load[0m
+[0;32mI (152) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (152) boot: Disabling RNG early entropy source...[0m
+[0;32mI (162) cpu_start: Unicore app[0m
+[0;32mI (171) cpu_start: Pro cpu start user code[0m
+[0;32mI (171) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (172) app_init: Application information:[0m
+[0;32mI (172) app_init: Project name:     Espressif[0m
+[0;32mI (175) app_init: App version:      12c14e0-dirty[0m
+[0;32mI (180) app_init: Compile time:     Oct 15 2025 18:17:32[0m
+[0;32mI (185) app_init: ELF file SHA256:  4d32b4cd7...[0m
+[0;32mI (189) app_init: ESP-IDF:          v5.5.1-dirty[0m
+[0;32mI (193) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (197) efuse_init: Max chip rev:     v0.99 [0m
+[0;32mI (201) efuse_init: Chip rev:         v0.2[0m
+[0;32mI (205) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (211) heap_init: At 4080D3F0 len 0006F220 (444 KiB): RAM[0m
+[0;32mI (216) heap_init: At 4087C610 len 00002F54 (11 KiB): RAM[0m
+[0;32mI (222) heap_init: At 50000000 len 00003FE8 (15 KiB): RTCRAM[0m
+[0;32mI (228) spi_flash: detected chip: generic[0m
+[0;32mI (231) spi_flash: flash io: dio[0m
+[0;33mW (234) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (246) sleep_gpio: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (252) sleep_gpio: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (259) main_task: Started on CPU0[0m
+[0;32mI (259) main_task: Calling app_main()[0m
+
+Scanning I2C bus...
+Device found at address: 0x01
+Device found at address: 0x02
+Device found at address: 0x03
+Device found at address: 0x04
+Device found at address: 0x05
+Device found at address: 0x06
+Device found at address: 0x07
+Device found at address: 0x08
+Device found at address: 0x09
+Device found at address: 0x0A
+Device found at address: 0x0B
+Device found at address: 0x0C
+Device found at address: 0x0D
+Device found at address: 0x0E
+Device found at address: 0x0F
+Device found at address: 0x10
+Device found at address: 0x11
+Device found at address: 0x12
+Device found at address: 0x13
+Device found at address: 0x14
+Device found at address: 0x15
+Device found at address: 0x16
+Device found at address: 0x17
+Device found at address: 0x18
+Device found at address: 0x19
+Device found at address: 0x1A
+Device found at address: 0x1B
+Device found at address: 0x1C
+Device found at address: 0x1D
+Device found at address: 0x1E
+Device found at address: 0x1F
+Device found at address: 0x20
+Device found at address: 0x21
+Device found at address: 0x22
+Device found at address: 0x23
+Device found at address: 0x24
+Device found at address: 0x25
+Device found at address: 0x26
+Device found at address: 0x27
+Device found at address: 0x28
+Device found at address: 0x29
+Device found at address: 0x2A
+Device found at address: 0x2B
+Device found at address: 0x2C
+Device found at address: 0x2D
+Device found at address: 0x2E
+Device found at address: 0x2F
+Device found at address: 0x30
+Device found at address: 0x31
+Device found at address: 0x32
+Device found at address: 0x33
+Device found at address: 0x34
+Device found at address: 0x35
+Device found at address: 0x36
+Device found at address: 0x37
+Device found at address: 0x38
+Device found at address: 0x39
+Device found at address: 0x3A
+Device found at address: 0x3B
+Device found at address: 0x3C
+Device found at address: 0x3D
+Device found at address: 0x3E
+Device found at address: 0x3F
+Device found at address: 0x40
+Device found at address: 0x41
+Device found at address: 0x42
+Device found at address: 0x43
+Device found at address: 0x44
+Device found at address: 0x45
+Device found at address: 0x46
+Device found at address: 0x47
+Device found at address: 0x48
+Device found at address: 0x49
+Device found at address: 0x4A
+Device found at address: 0x4B
+Device found at address: 0x4C
+Device found at address: 0x4D
+Device found at address: 0x4E
+Device found at address: 0x4F
+Device found at address: 0x50
+Device found at address: 0x51
+Device found at address: 0x52
+Device found at address: 0x53
+Device found at address: 0x54
+Device found at address: 0x55
+Device found at address: 0x56
+Device found at address: 0x57
+Device found at address: 0x58
+Device found at address: 0x59
+Device found at address: 0x5A
+Device found at address: 0x5B
+Device found at address: 0x5C
+Device found at address: 0x5D
+Device found at address: 0x5E
+Device found at address: 0x5F
+Device found at address: 0x60
+Device found at address: 0x61
+Device found at address: 0x62
+Device found at address: 0x63
+Device found at address: 0x64
+Device found at address: 0x65
+Device found at address: 0x66
+Device found at address: 0x67
+Device found at address: 0x68
+Device found at address: 0x69
+Device found at address: 0x6A
+Device found at address: 0x6B
+Device found at address: 0x6C
+Device found at address: 0x6D
+Device found at address: 0x6E
+Device found at address: 0x6F
+Device found at address: 0x70
+Device found at address: 0x71
+Device found at address: 0x72
+Device found at address: 0x73
+Device found at address: 0x74
+Device found at address: 0x75
+Device found at address: 0x76
+Device found at address: 0x77
+Device found at address: 0x78
+Device found at address: 0x79
+Device found at address: 0x7A
+Device found at address: 0x7B
+Device found at address: 0x7C
+Device found at address: 0x7D
+Device found at address: 0x7E
+[0;32mI (2689) MPU6050: Accel: X=1668, Y=-328, Z=18048[0m
+[0;32mI (2689) MPU6050: Gyro: X=-318, Y=786, Z=187[0m
+[0;32mI (3689) MPU6050: Accel: X=1804, Y=-288, Z=17800[0m
+[0;32mI (3689) MPU6050: Gyro: X=-263, Y=118, Z=222[0m
+[0;32mI (4689) MPU6050: Accel: X=1836, Y=-240, Z=17704[0m
+[0;32mI (4689) MPU6050: Gyro: X=-204, Y=124, Z=249[0m
+[0;32mI (5689) MPU6050: Accel: X=1784, Y=-240, Z=17716[0m
+[0;32mI (5689) MPU6050: Gyro: X=-241, Y=98, Z=271[0m
+[0;32mI (6689) MPU6050: Accel: X=1848, Y=-256, Z=17840[0m
+[0;32mI (6689) MPU6050: Gyro: X=-260, Y=98, Z=296[0m
+[0;32mI (7689) MPU6050: Accel: X=1804, Y=-200, Z=17584[0m
+[0;32mI (7689) MPU6050: Gyro: X=-229, Y=108, Z=230[0m
+[0;32mI (8689) MPU6050: Accel: X=1856, Y=-220, Z=17696[0m
+[0;32mI (8689) MPU6050: Gyro: X=-214, Y=95, Z=229[0m
+[0;32mI (9689) MPU6050: Accel: X=1780, Y=-216, Z=17596[0m
+[0;32mI (9689) MPU6050: Gyro: X=-237, Y=95, Z=258[0m
+[0;32mI (10689) MPU6050: Accel: X=3004, Y=-572, Z=12676[0m
+[0;32mI (10689) MPU6050: Gyro: X=-1051, Y=3347, Z=225[0m
+[0;32mI (11689) MPU6050: Accel: X=1780, Y=-140, Z=17568[0m
+[0;32mI (11689) MPU6050: Gyro: X=-252, Y=136, Z=229[0m
+[0;32mI (12689) MPU6050: Accel: X=1812, Y=-204, Z=17680[0m
+[0;32mI (12689) MPU6050: Gyro: X=-252, Y=106, Z=207[0m
+[0;32mI (13689) MPU6050: Accel: X=1684, Y=-176, Z=17816[0m
+[0;32mI (13689) MPU6050: Gyro: X=-244, Y=71, Z=204[0m
+Bouton pressé : reboot dans 1 seconde...
+ESP-ROM:esp32c6-20220919
+Build:Sep 19 2022
+rst:0xc (SW_CPU),boot:0x6f (SPI_FAST_FLASH_BOOT)
+Saved PC:0x4001975a
+SPIWP:0xee
+mode:DIO, clock div:2
+load:0x40875730,len:0x1744
+load:0x4086b910,len:0xe78
+load:0x4086e610,len:0x31c8
+entry 0x4086b91a
+[0;32mI (22) boot: ESP-IDF v5.5.1-dirty 2nd stage bootloader[0m
+[0;32mI (22) boot: compile time Oct 15 2025 18:17:57[0m
+[0;32mI (24) boot: chip revision: v0.2[0m
+[0;32mI (24) boot: efuse block revision: v0.3[0m
+[0;32mI (26) boot.esp32c6: SPI Speed      : 80MHz[0m
+[0;32mI (30) boot.esp32c6: SPI Mode       : DIO[0m
+[0;32mI (34) boot.esp32c6: SPI Flash Size : 2MB[0m
+[0;32mI (37) boot: Enabling RNG early entropy source...[0m
+[0;32mI (42) boot: Partition Table:[0m
+[0;32mI (44) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (51) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (57) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (64) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (70) boot: End of partition table[0m
+[0;32mI (74) esp_image: segment 0: paddr=00010020 vaddr=42018020 size=07aach ( 31404) map[0m
+[0;32mI (93) esp_image: segment 1: paddr=00017ad4 vaddr=40800000 size=00544h (  1348) load[0m
+[0;32mI (95) esp_image: segment 2: paddr=00018020 vaddr=42000020 size=114a4h ( 70820) map[0m
+[0;32mI (123) esp_image: segment 3: paddr=000294cc vaddr=40800544 size=0a9d0h ( 43472) load[0m
+[0;32mI (143) esp_image: segment 4: paddr=00033ea4 vaddr=4080af20 size=015d4h (  5588) load[0m
+[0;32mI (152) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (152) boot: Disabling RNG early entropy source...[0m
+[0;32mI (162) cpu_start: Unicore app[0m
+[0;32mI (171) cpu_start: Pro cpu start user code[0m
+[0;32mI (171) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (172) app_init: Application information:[0m
+[0;32mI (172) app_init: Project name:     Espressif[0m
+[0;32mI (175) app_init: App version:      12c14e0-dirty[0m
+[0;32mI (180) app_init: Compile time:     Oct 15 2025 18:17:32[0m
+[0;32mI (185) app_init: ELF file SHA256:  4d32b4cd7...[0m
+[0;32mI (189) app_init: ESP-IDF:          v5.5.1-dirty[0m
+[0;32mI (193) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (197) efuse_init: Max chip rev:     v0.99 [0m
+[0;32mI (201) efuse_init: Chip rev:         v0.2[0m
+[0;32mI (205) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (211) heap_init: At 4080D3F0 len 0006F220 (444 KiB): RAM[0m
+[0;32mI (217) heap_init: At 4087C610 len 00002F54 (11 KiB): RAM[0m
+[0;32mI (222) heap_init: At 50000000 len 00003FE8 (15 KiB): RTCRAM[0m
+[0;32mI (228) spi_flash: detected chip: generic[0m
+[0;32mI (231) spi_flash: flash io: dio[0m
+[0;33mW (234) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (246) sleep_gpio: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (252) sleep_gpio: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (259) main_task: Started on CPU0[0m
+[0;32mI (259) main_task: Calling app_main()[0m
+
+Scanning I2C bus...
+Device found at address: 0x01
+Device found at address: 0x02
+Device found at address: 0x03
+Device found at address: 0x04
+Device found at address: 0x05
+Device found at address: 0x06
+Device found at address: 0x07
+Device found at address: 0x08
+Device found at address: 0x09
+Device found at address: 0x0A
+Device found at address: 0x0B
+Device found at address: 0x0C
+Device found at address: 0x0D
+Device found at address: 0x0E
+Device found at address: 0x0F
+Device found at address: 0x10
+Device found at address: 0x11
+Device found at address: 0x12
+Device found at address: 0x13
+Device found at address: 0x14
+Device found at address: 0x15
+Device found at address: 0x16
+Device found at address: 0x17
+Device found at address: 0x18
+Device found at address: 0x19
+Device found at address: 0x1A
+Device found at address: 0x1B
+Device found at address: 0x1C
+Device found at address: 0x1D
+Device found at address: 0x1E
+Device found at address: 0x1F
+Device found at address: 0x20
+Device found at address: 0x21
+Device found at address: 0x22
+Device found at address: 0x23
+Device found at address: 0x24
+Device found at address: 0x25
+Device found at address: 0x26
+Device found at address: 0x27
+Device found at address: 0x28
+Device found at address: 0x29
+Device found at address: 0x2A
+Device found at address: 0x2B
+Device found at address: 0x2C
+Device found at address: 0x2D
+Device found at address: 0x2E
+Device found at address: 0x2F
+Device found at address: 0x30
+Device found at address: 0x31
+Device found at address: 0x32
+Device found at address: 0x33
+Device found at address: 0x34
+Device found at address: 0x35
+Device found at address: 0x36
+Device found at address: 0x37
+Device found at address: 0x38
+Device found at address: 0x39
+Device found at address: 0x3A
+Device found at address: 0x3B
+Device found at address: 0x3C
+Device found at address: 0x3D
+Device found at address: 0x3E
+Device found at address: 0x3F
+Device found at address: 0x40
+Device found at address: 0x41
+Device found at address: 0x42
+Device found at address: 0x43
+Device found at address: 0x44
+Device found at address: 0x45
+Device found at address: 0x46
+Device found at address: 0x47
+Device found at address: 0x48
+Device found at address: 0x49
+Device found at address: 0x4A
+Device found at address: 0x4B
+Device found at address: 0x4C
+Device found at address: 0x4D
+Device found at address: 0x4E
+Device found at address: 0x4F
+Device found at address: 0x50
+Device found at address: 0x51
+Device found at address: 0x52
+Device found at address: 0x53
+Device found at address: 0x54
+Device found at address: 0x55
+Device found at address: 0x56
+Device found at address: 0x57
+Device found at address: 0x58
+Device found at address: 0x59
+Device found at address: 0x5A
+Device found at address: 0x5B
+Device found at address: 0x5C
+Device found at address: 0x5D
+Device found at address: 0x5E
+Device found at address: 0x5F
+Device found at address: 0x60
+Device found at address: 0x61
+Device found at address: 0x62
+Device found at address: 0x63
+Device found at address: 0x64
+Device found at address: 0x65
+Device found at address: 0x66
+Device found at address: 0x67
+Device found at address: 0x68
+Device found at address: 0x69
+Device found at address: 0x6A
+Device found at address: 0x6B
+Device found at address: 0x6C
+Device found at address: 0x6D
+Device found at address: 0x6E
+Device found at address: 0x6F
+Device found at address: 0x70
+Device found at address: 0x71
+Device found at address: 0x72
+Device found at address: 0x73
+Device found at address: 0x74
+Device found at address: 0x75
+Device found at address: 0x76
+Device found at address: 0x77
+Device found at address: 0x78
+Device found at address: 0x79
+Device found at address: 0x7A
+Device found at address: 0x7B
+Device found at address: 0x7C
+Device found at address: 0x7D
+Device found at address: 0x7E
+Bouton pressé : reboot dans 1 seconde...
+ESP-ROM:esp32c6-20220919
+Build:Sep 19 2022
+rst:0xc (SW_CPU),boot:0x6f (SPI_FAST_FLASH_BOOT)
+Saved PC:0x4001975a
+SPIWP:0xee
+mode:DIO, clock div:2
+load:0x40875730,len:0x1744
+load:0x4086b910,len:0xe78
+load:0x4086e610,len:0x31c8
+entry 0x4086b91a
+[0;32mI (22) boot: ESP-IDF v5.5.1-dirty 2nd stage bootloader[0m
+[0;32mI (22) boot: compile time Oct 15 2025 18:17:57[0m
+[0;32mI (24) boot: chip revision: v0.2[0m
+[0;32mI (24) boot: efuse block revision: v0.3[0m
+[0;32mI (26) boot.esp32c6: SPI Speed      : 80MHz[0m
+[0;32mI (30) boot.esp32c6: SPI Mode       : DIO[0m
+[0;32mI (34) boot.esp32c6: SPI Flash Size : 2MB[0m
+[0;32mI (37) boot: Enabling RNG early entropy source...[0m
+[0;32mI (42) boot: Partition Table:[0m
+[0;32mI (44) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (51) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (57) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (64) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (70) boot: End of partition table[0m
+[0;32mI (74) esp_image: segment 0: paddr=00010020 vaddr=42018020 size=07aach ( 31404) map[0m
+[0;32mI (93) esp_image: segment 1: paddr=00017ad4 vaddr=40800000 size=00544h (  1348) load[0m
+[0;32mI (95) esp_image: segment 2: paddr=00018020 vaddr=42000020 size=114a4h ( 70820) map[0m
+[0;32mI (123) esp_image: segment 3: paddr=000294cc vaddr=40800544 size=0a9d0h ( 43472) load[0m
+[0;32mI (143) esp_image: segment 4: paddr=00033ea4 vaddr=4080af20 size=015d4h (  5588) load[0m
+[0;32mI (152) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (152) boot: Disabling RNG early entropy source...[0m
+[0;32mI (162) cpu_start: Unicore app[0m
+[0;32mI (171) cpu_start: Pro cpu start user code[0m
+[0;32mI (171) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (172) app_init: Application information:[0m
+[0;32mI (172) app_init: Project name:     Espressif[0m
+[0;32mI (175) app_init: App version:      12c14e0-dirty[0m
+[0;32mI (180) app_init: Compile time:     Oct 15 2025 18:17:32[0m
+[0;32mI (185) app_init: ELF file SHA256:  4d32b4cd7...[0m
+[0;32mI (189) app_init: ESP-IDF:          v5.5.1-dirty[0m
+[0;32mI (193) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (197) efuse_init: Max chip rev:     v0.99 [0m
+[0;32mI (201) efuse_init: Chip rev:         v0.2[0m
+[0;32mI (205) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (211) heap_init: At 4080D3F0 len 0006F220 (444 KiB): RAM[0m
+[0;32mI (216) heap_init: At 4087C610 len 00002F54 (11 KiB): RAM[0m
+[0;32mI (222) heap_init: At 50000000 len 00003FE8 (15 KiB): RTCRAM[0m
+[0;32mI (228) spi_flash: detected chip: generic[0m
+[0;32mI (231) spi_flash: flash io: dio[0m
+[0;33mW (234) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (246) sleep_gpio: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (252) sleep_gpio: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (259) main_task: Started on CPU0[0m
+[0;32mI (259) main_task: Calling app_main()[0m
+
+Scanning I2C bus...
+Device found at address: 0x01
+Device found at address: 0x02
+Device found at address: 0x03
+Device found at address: 0x04
+Device found at address: 0x05
+Device found at address: 0x06
+Device found at address: 0x07
+Device found at address: 0x08
+Device found at address: 0x09
+Device found at address: 0x0A
+Device found at address: 0x0B
+Device found at address: 0x0C
+Device found at address: 0x0D
+Device found at address: 0x0E
+Device found at address: 0x0F
+Device found at address: 0x10
+Device found at address: 0x11
+Device found at address: 0x12
+Device found at address: 0x13
+Device found at address: 0x14
+Device found at address: 0x15
+Device found at address: 0x16
+Device found at address: 0x17
+Device found at address: 0x18
+Device found at address: 0x19
+Device found at address: 0x1A
+Device found at address: 0x1B
+Device found at address: 0x1C
+Device found at address: 0x1D
+Device found at address: 0x1E
+Device found at address: 0x1F
+Device found at address: 0x20
+Device found at address: 0x21
+Device found at address: 0x22
+Device found at address: 0x23
+Device found at address: 0x24
+Device found at address: 0x25
+Device found at address: 0x26
+Device found at address: 0x27
+Device found at address: 0x28
+Device found at address: 0x29
+Device found at address: 0x2A
+Device found at address: 0x2B
+Device found at address: 0x2C
+Device found at address: 0x2D
+Device found at address: 0x2E
+Device found at address: 0x2F
+Device found at address: 0x30
+Device found at address: 0x31
+Device found at address: 0x32
+Device found at address: 0x33
+Device found at address: 0x34
+Device found at address: 0x35
+Device found at address: 0x36
+Device found at address: 0x37
+Device found at address: 0x38
+Device found at address: 0x39
+Device found at address: 0x3A
+Device found at address: 0x3B
+Device found at address: 0x3C
+Device found at address: 0x3D
+Device found at address: 0x3E
+Device found at address: 0x3F
+Device found at address: 0x40
+Device found at address: 0x41
+Device found at address: 0x42
+Device found at address: 0x43
+Device found at address: 0x44
+Device found at address: 0x45
+Device found at address: 0x46
+Device found at address: 0x47
+Device found at address: 0x48
+Device found at address: 0x49
+Device found at address: 0x4A
+Device found at address: 0x4B
+Device found at address: 0x4C
+Device found at address: 0x4D
+Device found at address: 0x4E
+Device found at address: 0x4F
+Device found at address: 0x50
+Device found at address: 0x51
+Device found at address: 0x52
+Device found at address: 0x53
+Device found at address: 0x54
+Device found at address: 0x55
+Device found at address: 0x56
+Device found at address: 0x57
+Device found at address: 0x58
+Device found at address: 0x59
+Device found at address: 0x5A
+Device found at address: 0x5B
+Device found at address: 0x5C
+Device found at address: 0x5D
+Device found at address: 0x5E
+Device found at address: 0x5F
+Device found at address: 0x60
+Device found at address: 0x61
+Device found at address: 0x62
+Device found at address: 0x63
+Device found at address: 0x64
+Device found at address: 0x65
+Device found at address: 0x66
+Device found at address: 0x67
+Device found at address: 0x68
+Device found at address: 0x69
+Device found at address: 0x6A
+Device found at address: 0x6B
+Device found at address: 0x6C
+Device found at address: 0x6D
+Device found at address: 0x6E
+Device found at address: 0x6F
+Device found at address: 0x70
+Device found at address: 0x71
+Device found at address: 0x72
+Device found at address: 0x73
+Device found at address: 0x74
+Device found at address: 0x75
+Device found at address: 0x76
+Device found at address: 0x77
+Device found at address: 0x78
+Device found at address: 0x79
+Device found at address: 0x7A
+Device found at address: 0x7B
+Device found at address: 0x7C
+Device found at address: 0x7D
+Device found at address: 0x7E
+[0;32mI (2689) MPU6050: Accel: X=1808, Y=-280, Z=17540[0m
+[0;32mI (2689) MPU6050: Gyro: X=-256, Y=112, Z=231[0m
+[0;32mI (3689) MPU6050: Accel: X=1764, Y=-196, Z=17608[0m
+[0;32mI (3689) MPU6050: Gyro: X=-246, Y=134, Z=260[0m
+[0;32mI (4689) MPU6050: Accel: X=1880, Y=-252, Z=17628[0m
+[0;32mI (4689) MPU6050: Gyro: X=-247, Y=105, Z=202[0m
+Bouton pressé : reboot dans 1 seconde...
+ESP-ROM:esp32c6-20220919
+Build:Sep 19 2022
+rst:0xc (SW_CPU),boot:0x6f (SPI_FAST_FLASH_BOOT)
+Saved PC:0x4001975a
+SPIWP:0xee
+mode:DIO, clock div:2
+load:0x40875730,len:0x1744
+load:0x4086b910,len:0xe78
+load:0x4086e610,len:0x31c8
+entry 0x4086b91a
+[0;32mI (22) boot: ESP-IDF v5.5.1-dirty 2nd stage bootloader[0m
+[0;32mI (22) boot: compile time Oct 15 2025 18:17:57[0m
+[0;32mI (24) boot: chip revision: v0.2[0m
+[0;32mI (24) boot: efuse block revision: v0.3[0m
+[0;32mI (26) boot.esp32c6: SPI Speed      : 80MHz[0m
+[0;32mI (30) boot.esp32c6: SPI Mode       : DIO[0m
+[0;32mI (34) boot.esp32c6: SPI Flash Size : 2MB[0m
+[0;32mI (37) boot: Enabling RNG early entropy source...[0m
+[0;32mI (42) boot: Partition Table:[0m
+[0;32mI (44) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (51) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (57) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (64) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (70) boot: End of partition table[0m
+[0;32mI (74) esp_image: segment 0: paddr=00010020 vaddr=42018020 size=07aach ( 31404) map[0m
+[0;32mI (93) esp_image: segment 1: paddr=00017ad4 vaddr=40800000 size=00544h (  1348) load[0m
+[0;32mI (95) esp_image: segment 2: paddr=00018020 vaddr=42000020 size=114a4h ( 70820) map[0m
+[0;32mI (123) esp_image: segment 3: paddr=000294cc vaddr=40800544 size=0a9d0h ( 43472) load[0m
+[0;32mI (143) esp_image: segment 4: paddr=00033ea4 vaddr=4080af20 size=015d4h (  5588) load[0m
+[0;32mI (152) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (152) boot: Disabling RNG early entropy source...[0m
+[0;32mI (162) cpu_start: Unicore app[0m
+[0;32mI (171) cpu_start: Pro cpu start user code[0m
+[0;32mI (171) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (172) app_init: Application information:[0m
+[0;32mI (172) app_init: Project name:     Espressif[0m
+[0;32mI (175) app_init: App version:      12c14e0-dirty[0m
+[0;32mI (180) app_init: Compile time:     Oct 15 2025 18:17:32[0m
+[0;32mI (185) app_init: ELF file SHA256:  4d32b4cd7...[0m
+[0;32mI (189) app_init: ESP-IDF:          v5.5.1-dirty[0m
+[0;32mI (194) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (197) efuse_init: Max chip rev:     v0.99 [0m
+[0;32mI (201) efuse_init: Chip rev:         v0.2[0m
+[0;32mI (205) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (211) heap_init: At 4080D3F0 len 0006F220 (444 KiB): RAM[0m
+[0;32mI (217) heap_init: At 4087C610 len 00002F54 (11 KiB): RAM[0m
+[0;32mI (222) heap_init: At 50000000 len 00003FE8 (15 KiB): RTCRAM[0m
+[0;32mI (228) spi_flash: detected chip: generic[0m
+[0;32mI (231) spi_flash: flash io: dio[0m
+[0;33mW (234) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (246) sleep_gpio: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (252) sleep_gpio: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (259) main_task: Started on CPU0[0m
+[0;32mI (259) main_task: Calling app_main()[0m
+
+Scanning I2C bus...
+Device found at address: 0x01
+Device found at address: 0x02
+Device found at address: 0x03
+Device found at address: 0x04
+Device found at address: 0x05
+Device found at address: 0x06
+Device found at address: 0x07
+Device found at address: 0x08
+Device found at address: 0x09
+Device found at address: 0x0A
+Device found at address: 0x0B
+Device found at address: 0x0C
+Device found at address: 0x0D
+Device found at address: 0x0E
+Device found at address: 0x0F
+Device found at address: 0x10
+Device found at address: 0x11
+Device found at address: 0x12
+Device found at address: 0x13
+Device found at address: 0x14
+Device found at address: 0x15
+Device found at address: 0x16
+Device found at address: 0x17
+Device found at address: 0x18
+Device found at address: 0x19
+Device found at address: 0x1A
+Device found at address: 0x1B
+Device found at address: 0x1C
+Device found at address: 0x1D
+Device found at address: 0x1E
+Device found at address: 0x1F
+Device found at address: 0x20
+Device found at address: 0x21
+Device found at address: 0x22
+Device found at address: 0x23
+Device found at address: 0x24
+Device found at address: 0x25
+Device found at address: 0x26
+Device found at address: 0x27
+Device found at address: 0x28
+Device found at address: 0x29
+Device found at address: 0x2A
+Device found at address: 0x2B
+Device found at address: 0x2C
+Device found at address: 0x2D
+Device found at address: 0x2E
+Device found at address: 0x2F
+Device found at address: 0x30
+Device found at address: 0x31
+Device found at address: 0x32
+Device found at address: 0x33
+Device found at address: 0x34
+Device found at address: 0x35
+Device found at address: 0x36
+Device found at address: 0x37
+Device found at address: 0x38
+Device found at address: 0x39
+Device found at address: 0x3A
+Device found at address: 0x3B
+Device found at address: 0x3C
+Device found at address: 0x3D
+Device found at address: 0x3E
+Device found at address: 0x3F
+Device found at address: 0x40
+Device found at address: 0x41
+Device found at address: 0x42
+Device found at address: 0x43
+Device found at address: 0x44
+Device found at address: 0x45
+Device found at address: 0x46
+Device found at address: 0x47
+Device found at address: 0x48
+Device found at address: 0x49
+Device found at address: 0x4A
+Device found at address: 0x4B
+Device found at address: 0x4C
+Device found at address: 0x4D
+Device found at address: 0x4E
+Device found at address: 0x4F
+Device found at address: 0x50
+Device found at address: 0x51
+Device found at address: 0x52
+Device found at address: 0x53
+Device found at address: 0x54
+Device found at address: 0x55
+Device found at address: 0x56
+Device found at address: 0x57
+Device found at address: 0x58
+Device found at address: 0x59
+Device found at address: 0x5A
+Device found at address: 0x5B
+Device found at address: 0x5C
+Device found at address: 0x5D
+Device found at address: 0x5E
+Device found at address: 0x5F
+Device found at address: 0x60
+Device found at address: 0x61
+Device found at address: 0x62
+Device found at address: 0x63
+Device found at address: 0x64
+Device found at address: 0x65
+Device found at address: 0x66
+Device found at address: 0x67
+Device found at address: 0x68
+Device found at address: 0x69
+Device found at address: 0x6A
+Device found at address: 0x6B
+Device found at address: 0x6C
+Device found at address: 0x6D
+Device found at address: 0x6E
+Device found at address: 0x6F
+Device found at address: 0x70
+Device found at address: 0x71
+Device found at address: 0x72
+Device found at address: 0x73
+Device found at address: 0x74
+Device found at address: 0x75
+Device found at address: 0x76
+Device found at address: 0x77
+Device found at address: 0x78
+Device found at address: 0x79
+Device found at address: 0x7A
+Device found at address: 0x7B
+Device found at address: 0x7C
+Device found at address: 0x7D
+Device found at address: 0x7E
+[0;32mI (2689) MPU6050: Accel: X=1832, Y=-248, Z=17620[0m
+[0;32mI (2689) MPU6050: Gyro: X=-255, Y=135, Z=239[0m
+[0;32mI (3689) MPU6050: Accel: X=1836, Y=-280, Z=17660[0m
+[0;32mI (3689) MPU6050: Gyro: X=-253, Y=94, Z=190[0m
+[0;32mI (4689) MPU6050: Accel: X=1780, Y=-232, Z=17596[0m
+[0;32mI (4689) MPU6050: Gyro: X=-244, Y=107, Z=249[0m
+[0;32mI (5689) MPU6050: Accel: X=1816, Y=-200, Z=17728[0m
+[0;32mI (5689) MPU6050: Gyro: X=-236, Y=89, Z=250[0m
+[0;32mI (6689) MPU6050: Accel: X=1840, Y=-168, Z=17656[0m
+[0;32mI (6689) MPU6050: Gyro: X=-263, Y=116, Z=213[0m
+[0;32mI (7689) MPU6050: Accel: X=1796, Y=-312, Z=17536[0m
+[0;32mI (7689) MPU6050: Gyro: X=-253, Y=99, Z=232[0m
+[0;32mI (8689) MPU6050: Accel: X=1772, Y=-268, Z=17732[0m
+[0;32mI (8689) MPU6050: Gyro: X=-254, Y=116, Z=241[0m
+[0;32mI (9689) MPU6050: Accel: X=1784, Y=-196, Z=17676[0m
+[0;32mI (9689) MPU6050: Gyro: X=-237, Y=93, Z=271[0m
+[0;32mI (10689) MPU6050: Accel: X=1820, Y=-220, Z=17684[0m
+[0;32mI (10689) MPU6050: Gyro: X=-262, Y=76, Z=275[0m
+[0;32mI (11689) MPU6050: Accel: X=1852, Y=-216, Z=17584[0m
+[0;32mI (11689) MPU6050: Gyro: X=-238, Y=102, Z=254[0m
+[0;32mI (12689) MPU6050: Accel: X=1672, Y=-208, Z=17692[0m
+[0;32mI (12689) MPU6050: Gyro: X=-239, Y=121, Z=216[0m
+[0;32mI (13689) MPU6050: Accel: X=1680, Y=-180, Z=17584[0m
+[0;32mI (13689) MPU6050: Gyro: X=-215, Y=163, Z=304[0m
+[0;32mI (14689) MPU6050: Accel: X=1644, Y=-160, Z=17696[0m
+[0;32mI (14689) MPU6050: Gyro: X=-223, Y=171, Z=255[0m
+[0;32mI (15689) MPU6050: Accel: X=1656, Y=-196, Z=17612[0m
+[0;32mI (15689) MPU6050: Gyro: X=-227, Y=76, Z=254[0m
+[0;32mI (16689) MPU6050: Accel: X=1644, Y=-160, Z=17752[0m
+[0;32mI (16689) MPU6050: Gyro: X=-195, Y=112, Z=283[0m
+[0;32mI (17689) MPU6050: Accel: X=1596, Y=-248, Z=17580[0m
+[0;32mI (17689) MPU6050: Gyro: X=-289, Y=88, Z=173[0m
+[0;32mI (18689) MPU6050: Accel: X=1704, Y=-248, Z=17720[0m
+[0;32mI (18689) MPU6050: Gyro: X=-245, Y=82, Z=235[0m
+Bouton pressé : reboot dans 1 seconde...
+ESP-ROM:esp32c6-20220919
+Build:Sep 19 2022
+rst:0xc (SW_CPU),boot:0x6f (SPI_FAST_FLASH_BOOT)
+Saved PC:0x4001975a
+SPIWP:0xee
+mode:DIO, clock div:2
+load:0x40875730,len:0x1744
+load:0x4086b910,len:0xe78
+load:0x4086e610,len:0x31c8
+entry 0x4086b91a
+[0;32mI (22) boot: ESP-IDF v5.5.1-dirty 2nd stage bootloader[0m
+[0;32mI (22) boot: compile time Oct 15 2025 18:17:57[0m
+[0;32mI (24) boot: chip revision: v0.2[0m
+[0;32mI (24) boot: efuse block revision: v0.3[0m
+[0;32mI (26) boot.esp32c6: SPI Speed      : 80MHz[0m
+[0;32mI (30) boot.esp32c6: SPI Mode       : DIO[0m
+[0;32mI (34) boot.esp32c6: SPI Flash Size : 2MB[0m
+[0;32mI (37) boot: Enabling RNG early entropy source...[0m
+[0;32mI (42) boot: Partition Table:[0m
+[0;32mI (44) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (51) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (57) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (64) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (70) boot: End of partition table[0m
+[0;32mI (74) esp_image: segment 0: paddr=00010020 vaddr=42018020 size=07aach ( 31404) map[0m
+[0;32mI (93) esp_image: segment 1: paddr=00017ad4 vaddr=40800000 size=00544h (  1348) load[0m
+[0;32mI (95) esp_image: segment 2: paddr=00018020 vaddr=42000020 size=114a4h ( 70820) map[0m
+[0;32mI (123) esp_image: segment 3: paddr=000294cc vaddr=40800544 size=0a9d0h ( 43472) load[0m
+[0;32mI (143) esp_image: segment 4: paddr=00033ea4 vaddr=4080af20 size=015d4h (  5588) load[0m
+[0;32mI (152) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (152) boot: Disabling RNG early entropy source...[0m
+[0;32mI (162) cpu_start: Unicore app[0m
+[0;32mI (171) cpu_start: Pro cpu start user code[0m
+[0;32mI (171) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (172) app_init: Application information:[0m
+[0;32mI (172) app_init: Project name:     Espressif[0m
+[0;32mI (175) app_init: App version:      12c14e0-dirty[0m
+[0;32mI (180) app_init: Compile time:     Oct 15 2025 18:17:32[0m
+[0;32mI (185) app_init: ELF file SHA256:  4d32b4cd7...[0m
+[0;32mI (189) app_init: ESP-IDF:          v5.5.1-dirty[0m
+[0;32mI (193) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (197) efuse_init: Max chip rev:     v0.99 [0m
+[0;32mI (201) efuse_init: Chip rev:         v0.2[0m
+[0;32mI (205) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (211) heap_init: At 4080D3F0 len 0006F220 (444 KiB): RAM[0m
+[0;32mI (217) heap_init: At 4087C610 len 00002F54 (11 KiB): RAM[0m
+[0;32mI (222) heap_init: At 50000000 len 00003FE8 (15 KiB): RTCRAM[0m
+[0;32mI (228) spi_flash: detected chip: generic[0m
+[0;32mI (231) spi_flash: flash io: dio[0m
+[0;33mW (234) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (246) sleep_gpio: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (252) sleep_gpio: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (259) main_task: Started on CPU0[0m
+[0;32mI (259) main_task: Calling app_main()[0m
+
+Scanning I2C bus...
+Device found at address: 0x01
+Device found at address: 0x02
+Device found at address: 0x03
+Device found at address: 0x04
+Device found at address: 0x05
+Device found at address: 0x06
+Device found at address: 0x07
+Device found at address: 0x08
+Device found at address: 0x09
+Device found at address: 0x0A
+Device found at address: 0x0B
+Device found at address: 0x0C
+Device found at address: 0x0D
+Device found at address: 0x0E
+Device found at address: 0x0F
+Device found at address: 0x10
+Device found at address: 0x11
+Device found at address: 0x12
+Device found at address: 0x13
+Device found at address: 0x14
+Device found at address: 0x15
+Device found at address: 0x16
+Device found at address: 0x17
+Device found at address: 0x18
+Device found at address: 0x19
+Device found at address: 0x1A
+Device found at address: 0x1B
+Device found at address: 0x1C
+Device found at address: 0x1D
+Device found at address: 0x1E
+Device found at address: 0x1F
+Device found at address: 0x20
+Device found at address: 0x21
+Device found at address: 0x22
+Device found at address: 0x23
+Device found at address: 0x24
+Device found at address: 0x25
+Device found at address: 0x26
+Device found at address: 0x27
+Device found at address: 0x28
+Device found at address: 0x29
+Device found at address: 0x2A
+Device found at address: 0x2B
+Device found at address: 0x2C
+Device found at address: 0x2D
+Device found at address: 0x2E
+Device found at address: 0x2F
+Device found at address: 0x30
+Device found at address: 0x31
+Device found at address: 0x32
+Device found at address: 0x33
+Device found at address: 0x34
+Device found at address: 0x35
+Device found at address: 0x36
+Device found at address: 0x37
+Device found at address: 0x38
+Device found at address: 0x39
+Device found at address: 0x3A
+Device found at address: 0x3B
+Device found at address: 0x3C
+Device found at address: 0x3D
+Device found at address: 0x3E
+Device found at address: 0x3F
+Device found at address: 0x40
+Device found at address: 0x41
+Device found at address: 0x42
+Device found at address: 0x43
+Device found at address: 0x44
+Device found at address: 0x45
+Device found at address: 0x46
+Device found at address: 0x47
+Device found at address: 0x48
+Device found at address: 0x49
+Device found at address: 0x4A
+Device found at address: 0x4B
+Device found at address: 0x4C
+Device found at address: 0x4D
+Device found at address: 0x4E
+Device found at address: 0x4F
+Device found at address: 0x50
+Device found at address: 0x51
+Device found at address: 0x52
+Device found at address: 0x53
+Device found at address: 0x54
+Device found at address: 0x55
+Device found at address: 0x56
+Device found at address: 0x57
+Device found at address: 0x58
+Device found at address: 0x59
+Device found at address: 0x5A
+Device found at address: 0x5B
+Device found at address: 0x5C
+Device found at address: 0x5D
+Device found at address: 0x5E
+Device found at address: 0x5F
+Device found at address: 0x60
+Device found at address: 0x61
+Device found at address: 0x62
+Device found at address: 0x63
+Device found at address: 0x64
+Device found at address: 0x65
+Device found at address: 0x66
+Device found at address: 0x67
+Device found at address: 0x68
+Device found at address: 0x69
+Device found at address: 0x6A
+Device found at address: 0x6B
+Device found at address: 0x6C
+Device found at address: 0x6D
+Device found at address: 0x6E
+Device found at address: 0x6F
+Device found at address: 0x70
+Device found at address: 0x71
+Device found at address: 0x72
+Device found at address: 0x73
+Device found at address: 0x74
+Device found at address: 0x75
+Device found at address: 0x76
+Device found at address: 0x77
+Device found at address: 0x78
+Device found at address: 0x79
+Device found at address: 0x7A
+Device found at address: 0x7B
+Device found at address: 0x7C
+Device found at address: 0x7D
+Device found at address: 0x7E
+[0;32mI (2689) MPU6050: Accel: X=1660, Y=-200, Z=17684[0m
+[0;32mI (2689) MPU6050: Gyro: X=-242, Y=98, Z=258[0m
+[0;32mI (3689) MPU6050: Accel: X=1620, Y=-152, Z=17708[0m
+[0;32mI (3689) MPU6050: Gyro: X=-260, Y=107, Z=224[0m
+[0;32mI (4689) MPU6050: Accel: X=1632, Y=-268, Z=17648[0m
+[0;32mI (4689) MPU6050: Gyro: X=-209, Y=112, Z=231[0m
+[0;32mI (5689) MPU6050: Accel: X=1728, Y=-200, Z=17644[0m
+[0;32mI (5689) MPU6050: Gyro: X=-256, Y=138, Z=236[0m
+[0;32mI (6689) MPU6050: Accel: X=1728, Y=-208, Z=17652[0m
+[0;32mI (6689) MPU6050: Gyro: X=-246, Y=72, Z=289[0m
+[0;32mI (7689) MPU6050: Accel: X=1760, Y=-200, Z=17572[0m
+[0;32mI (7689) MPU6050: Gyro: X=-244, Y=121, Z=263[0m
+[0;32mI (8689) MPU6050: Accel: X=1644, Y=-236, Z=17692[0m
+[0;32mI (8689) MPU6050: Gyro: X=-247, Y=93, Z=212[0m
+[0;32mI (9689) MPU6050: Accel: X=1672, Y=-224, Z=17628[0m
+[0;32mI (9689) MPU6050: Gyro: X=-220, Y=93, Z=250[0m
+[0;32mI (10689) MPU6050: Accel: X=1700, Y=-152, Z=17572[0m
+[0;32mI (10689) MPU6050: Gyro: X=-221, Y=107, Z=242[0m
+[0;32mI (11689) MPU6050: Accel: X=1668, Y=-180, Z=17696[0m
+[0;32mI (11689) MPU6050: Gyro: X=-240, Y=81, Z=239[0m
+[0;32mI (12689) MPU6050: Accel: X=1760, Y=-184, Z=17712[0m
+[0;32mI (12689) MPU6050: Gyro: X=-249, Y=97, Z=235[0m
+[0;32mI (13689) MPU6050: Accel: X=1728, Y=-204, Z=17608[0m
+[0;32mI (13689) MPU6050: Gyro: X=-233, Y=77, Z=234[0m
+[0;32mI (14689) MPU6050: Accel: X=1648, Y=-184, Z=17776[0m
+[0;32mI (14689) MPU6050: Gyro: X=-223, Y=187, Z=310[0m
+[0;32mI (15689) MPU6050: Accel: X=1532, Y=-80, Z=17708[0m
+[0;32mI (15689) MPU6050: Gyro: X=-250, Y=120, Z=62[0m
+[0;32mI (16689) MPU6050: Accel: X=1608, Y=-188, Z=17684[0m
+[0;32mI (16689) MPU6050: Gyro: X=-272, Y=109, Z=162[0m
+[0;32mI (17689) MPU6050: Accel: X=1816, Y=-144, Z=17620[0m
+[0;32mI (17689) MPU6050: Gyro: X=-204, Y=111, Z=127[0m
+
+Scanning I2C bus...
+Device found at address: 0x01
+Device found at address: 0x02
+Device found at address: 0x03
+Device found at address: 0x04
+Device found at address: 0x05
+Device found at address: 0x06
+Device found at address: 0x07
+Device found at address: 0x08
+Device found at address: 0x09
+Device found at address: 0x0A
+Device found at address: 0x0B
+Device found at address: 0x0C
+Device found at address: 0x0D
+Device found at address: 0x0E
+Device found at address: 0x0F
+Device found at address: 0x10
+Device found at address: 0x11
+Device found at address: 0x12
+Device found at address: 0x13
+Device found at address: 0x14
+Device found at address: 0x15
+Device found at address: 0x16
+Device found at address: 0x17
+Device found at address: 0x18
+Device found at address: 0x19
+Device found at address: 0x1A
+Device found at address: 0x1B
+Device found at address: 0x1C
+Device found at address: 0x1D
+Device found at address: 0x1E
+Device found at address: 0x1F
+Device found at address: 0x20
+Device found at address: 0x21
+Device found at address: 0x22
+Device found at address: 0x23
+Device found at address: 0x24
+Device found at address: 0x25
+Device found at address: 0x26
+Device found at address: 0x27
+Device found at address: 0x28
+Device found at address: 0x29
+Device found at address: 0x2A
+Device found at address: 0x2B
+Device found at address: 0x2C
+Device found at address: 0x2D
+Device found at address: 0x2E
+Device found at address: 0x2F
+Device found at address: 0x30
+Device found at address: 0x31
+Device found at address: 0x32
+Device found at address: 0x33
+Device found at address: 0x34
+Device found at address: 0x35
+Device found at address: 0x36
+Device found at address: 0x37
+Device found at address: 0x38
+Device found at address: 0x39
+Device found at address: 0x3A
+Device found at address: 0x3B
+Device found at address: 0x3C
+Device found at address: 0x3D
+Device found at address: 0x3E
+Device found at address: 0x3F
+Device found at address: 0x40
+Device found at address: 0x41
+Device found at address: 0x42
+Device found at address: 0x43
+Device found at address: 0x44
+Device found at address: 0x45
+Device found at address: 0x46
+Device found at address: 0x47
+Device found at address: 0x48
+Device found at address: 0x49
+Device found at address: 0x4A
+Device found at address: 0x4B
+Device found at address: 0x4C
+Device found at address: 0x4D
+Device found at address: 0x4E
+Device found at address: 0x4F
+Device found at address: 0x50
+Device found at address: 0x51
+Device found at address: 0x52
+Device found at address: 0x53
+Device found at address: 0x54
+Device found at address: 0x55
+Device found at address: 0x56
+Device found at address: 0x57
+Device found at address: 0x58
+Device found at address: 0x59
+Device found at address: 0x5A
+Device found at address: 0x5B
+Device found at address: 0x5C
+Device found at address: 0x5D
+Device found at address: 0x5E
+Device found at address: 0x5F
+Device found at address: 0x60
+Device found at address: 0x61
+Device found at address: 0x62
+Device found at address: 0x63
+Device found at address: 0x64
+Device found at address: 0x65
+Device found at address: 0x66
+Device found at address: 0x67
+Device found at address: 0x68
+Device found at address: 0x69
+Device found at address: 0x6A
+Device found at address: 0x6B
+Device found at address: 0x6C
+Device found at address: 0x6D
+Device found at address: 0x6E
+Device found at address: 0x6F
+Device found at address: 0x70
+Device found at address: 0x71
+Device found at address: 0x72
+Device found at address: 0x73
+Device found at address: 0x74
+Device found at address: 0x75
+Device found at address: 0x76
+Device found at address: 0x77
+Device found at address: 0x78
+Device found at address: 0x79
+Device found at address: 0x7A
+Device found at address: 0x7B
+Device found at address: 0x7C
+Device found at address: 0x7D
+Device found at address: 0x7E
+Bouton pressé : reboot dans 1 seconde...
+ESP-ROM:esp32c6-20220919
+Build:Sep 19 2022
+rst:0xc (SW_CPU),boot:0x6f (SPI_FAST_FLASH_BOOT)
+Saved PC:0x4001975a
+SPIWP:0xee
+mode:DIO, clock div:2
+load:0x40875730,len:0x1744
+load:0x4086b910,len:0xe78
+load:0x4086e610,len:0x31c8
+entry 0x4086b91a
+[0;32mI (22) boot: ESP-IDF v5.5.1-dirty 2nd stage bootloader[0m
+[0;32mI (22) boot: compile time Oct 15 2025 18:17:57[0m
+[0;32mI (24) boot: chip revision: v0.2[0m
+[0;32mI (24) boot: efuse block revision: v0.3[0m
+[0;32mI (26) boot.esp32c6: SPI Speed      : 80MHz[0m
+[0;32mI (30) boot.esp32c6: SPI Mode       : DIO[0m
+[0;32mI (34) boot.esp32c6: SPI Flash Size : 2MB[0m
+[0;32mI (37) boot: Enabling RNG early entropy source...[0m
+[0;32mI (42) boot: Partition Table:[0m
+[0;32mI (44) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (51) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (57) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (64) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (70) boot: End of partition table[0m
+[0;32mI (74) esp_image: segment 0: paddr=00010020 vaddr=42018020 size=07aach ( 31404) map[0m
+[0;32mI (93) esp_image: segment 1: paddr=00017ad4 vaddr=40800000 size=00544h (  1348) load[0m
+[0;32mI (95) esp_image: segment 2: paddr=00018020 vaddr=42000020 size=114a4h ( 70820) map[0m
+[0;32mI (123) esp_image: segment 3: paddr=000294cc vaddr=40800544 size=0a9d0h ( 43472) load[0m
+[0;32mI (143) esp_image: segment 4: paddr=00033ea4 vaddr=4080af20 size=015d4h (  5588) load[0m
+[0;32mI (152) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (152) boot: Disabling RNG early entropy source...[0m
+[0;32mI (162) cpu_start: Unicore app[0m
+[0;32mI (171) cpu_start: Pro cpu start user code[0m
+[0;32mI (171) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (172) app_init: Application information:[0m
+[0;32mI (172) app_init: Project name:     Espressif[0m
+[0;32mI (175) app_init: App version:      12c14e0-dirty[0m
+[0;32mI (180) app_init: Compile time:     Oct 15 2025 18:17:32[0m
+[0;32mI (185) app_init: ELF file SHA256:  4d32b4cd7...[0m
+[0;32mI (189) app_init: ESP-IDF:          v5.5.1-dirty[0m
+[0;32mI (193) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (197) efuse_init: Max chip rev:     v0.99 [0m
+[0;32mI (201) efuse_init: Chip rev:         v0.2[0m
+[0;32mI (205) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (211) heap_init: At 4080D3F0 len 0006F220 (444 KiB): RAM[0m
+[0;32mI (216) heap_init: At 4087C610 len 00002F54 (11 KiB): RAM[0m
+[0;32mI (222) heap_init: At 50000000 len 00003FE8 (15 KiB): RTCRAM[0m
+[0;32mI (228) spi_flash: detected chip: generic[0m
+[0;32mI (231) spi_flash: flash io: dio[0m
+[0;33mW (234) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (246) sleep_gpio: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (252) sleep_gpio: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (259) main_task: Started on CPU0[0m
+[0;32mI (259) main_task: Calling app_main()[0m
+
+Scanning I2C bus...
+Device found at address: 0x01
+Device found at address: 0x02
+Device found at address: 0x03
+Device found at address: 0x04
+Device found at address: 0x05
+Device found at address: 0x06
+Device found at address: 0x07
+Device found at address: 0x08
+Device found at address: 0x09
+Device found at address: 0x0A
+Device found at address: 0x0B
+Device found at address: 0x0C
+Device found at address: 0x0D
+Device found at address: 0x0E
+Device found at address: 0x0F
+Device found at address: 0x10
+Device found at address: 0x11
+Device found at address: 0x12
+Device found at address: 0x13
+Device found at address: 0x14
+Device found at address: 0x15
+Device found at address: 0x16
+Device found at address: 0x17
+Device found at address: 0x18
+Device found at address: 0x19
+Device found at address: 0x1A
+Device found at address: 0x1B
+Device found at address: 0x1C
+Device found at address: 0x1D
+Device found at address: 0x1E
+Device found at address: 0x1F
+Device found at address: 0x20
+Device found at address: 0x21
+Device found at address: 0x22
+Device found at address: 0x23
+Device found at address: 0x24
+Device found at address: 0x25
+Device found at address: 0x26
+Device found at address: 0x27
+Device found at address: 0x28
+Device found at address: 0x29
+Device found at address: 0x2A
+Device found at address: 0x2B
+Device found at address: 0x2C
+Device found at address: 0x2D
+Device found at address: 0x2E
+Device found at address: 0x2F
+Device found at address: 0x30
+Device found at address: 0x31
+Device found at address: 0x32
+Device found at address: 0x33
+Device found at address: 0x34
+Device found at address: 0x35
+Device found at address: 0x36
+Device found at address: 0x37
+Device found at address: 0x38
+Device found at address: 0x39
+Device found at address: 0x3A
+Device found at address: 0x3B
+Device found at address: 0x3C
+Device found at address: 0x3D
+Device found at address: 0x3E
+Device found at address: 0x3F
+Device found at address: 0x40
+Device found at address: 0x41
+Device found at address: 0x42
+Device found at address: 0x43
+Device found at address: 0x44
+Device found at address: 0x45
+Device found at address: 0x46
+Device found at address: 0x47
+Device found at address: 0x48
+Device found at address: 0x49
+Device found at address: 0x4A
+Device found at address: 0x4B
+Device found at address: 0x4C
+Device found at address: 0x4D
+Device found at address: 0x4E
+Device found at address: 0x4F
+Device found at address: 0x50
+Device found at address: 0x51
+Device found at address: 0x52
+Device found at address: 0x53
+Device found at address: 0x54
+Device found at address: 0x55
+Device found at address: 0x56
+Device found at address: 0x57
+Device found at address: 0x58
+Device found at address: 0x59
+Device found at address: 0x5A
+Device found at address: 0x5B
+Device found at address: 0x5C
+Device found at address: 0x5D
+Device found at address: 0x5E
+Device found at address: 0x5F
+Device found at address: 0x60
+Device found at address: 0x61
+Device found at address: 0x62
+Device found at address: 0x63
+Device found at address: 0x64
+Device found at address: 0x65
+Device found at address: 0x66
+Device found at address: 0x67
+Device found at address: 0x68
+Device found at address: 0x69
+Device found at address: 0x6A
+Device found at address: 0x6B
+Device found at address: 0x6C
+Device found at address: 0x6D
+Device found at address: 0x6E
+Device found at address: 0x6F
+Device found at address: 0x70
+Device found at address: 0x71
+Device found at address: 0x72
+Device found at address: 0x73
+Device found at address: 0x74
+Device found at address: 0x75
+Device found at address: 0x76
+Device found at address: 0x77
+Device found at address: 0x78
+Device found at address: 0x79
+Device found at address: 0x7A
+Device found at address: 0x7B
+Device found at address: 0x7C
+Device found at address: 0x7D
+Device found at address: 0x7E
+Bouton pressé : reboot dans 1 seconde...
+ESP-ROM:esp32c6-20220919
+Build:Sep 19 2022
+rst:0xc (SW_CPU),boot:0x6f (SPI_FAST_FLASH_BOOT)
+Saved PC:0x4001975a
+SPIWP:0xee
+mode:DIO, clock div:2
+load:0x40875730,len:0x1744
+load:0x4086b910,len:0xe78
+load:0x4086e610,len:0x31c8
+entry 0x4086b91a
+[0;32mI (22) boot: ESP-IDF v5.5.1-dirty 2nd stage bootloader[0m
+[0;32mI (22) boot: compile time Oct 15 2025 18:17:57[0m
+[0;32mI (24) boot: chip revision: v0.2[0m
+[0;32mI (24) boot: efuse block revision: v0.3[0m
+[0;32mI (26) boot.esp32c6: SPI Speed      : 80MHz[0m
+[0;32mI (30) boot.esp32c6: SPI Mode       : DIO[0m
+[0;32mI (34) boot.esp32c6: SPI Flash Size : 2MB[0m
+[0;32mI (37) boot: Enabling RNG early entropy source...[0m
+[0;32mI (42) boot: Partition Table:[0m
+[0;32mI (44) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (51) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (57) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (64) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (70) boot: End of partition table[0m
+[0;32mI (74) esp_image: segment 0: paddr=00010020 vaddr=42018020 size=07aach ( 31404) map[0m
+[0;32mI (93) esp_image: segment 1: paddr=00017ad4 vaddr=40800000 size=00544h (  1348) load[0m
+[0;32mI (95) esp_image: segment 2: paddr=00018020 vaddr=42000020 size=114a4h ( 70820) map[0m
+[0;32mI (123) esp_image: segment 3: paddr=000294cc vaddr=40800544 size=0a9d0h ( 43472) load[0m
+[0;32mI (143) esp_image: segment 4: paddr=00033ea4 vaddr=4080af20 size=015d4h (  5588) load[0m
+[0;32mI (152) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (152) boot: Disabling RNG early entropy source...[0m
+[0;32mI (162) cpu_start: Unicore app[0m
+[0;32mI (171) cpu_start: Pro cpu start user code[0m
+[0;32mI (171) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (172) app_init: Application information:[0m
+[0;32mI (172) app_init: Project name:     Espressif[0m
+[0;32mI (175) app_init: App version:      12c14e0-dirty[0m
+[0;32mI (180) app_init: Compile time:     Oct 15 2025 18:17:32[0m
+[0;32mI (185) app_init: ELF file SHA256:  4d32b4cd7...[0m
+[0;32mI (189) app_init: ESP-IDF:          v5.5.1-dirty[0m
+[0;32mI (193) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (197) efuse_init: Max chip rev:     v0.99 [0m
+[0;32mI (201) efuse_init: Chip rev:         v0.2[0m
+[0;32mI (205) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (211) heap_init: At 4080D3F0 len 0006F220 (444 KiB): RAM[0m
+[0;32mI (217) heap_init: At 4087C610 len 00002F54 (11 KiB): RAM[0m
+[0;32mI (222) heap_init: At 50000000 len 00003FE8 (15 KiB): RTCRAM[0m
+[0;32mI (228) spi_flash: detected chip: generic[0m
+[0;32mI (231) spi_flash: flash io: dio[0m
+[0;33mW (234) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (246) sleep_gpio: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (252) sleep_gpio: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (259) main_task: Started on CPU0[0m
+[0;32mI (259) main_task: Calling app_main()[0m
+
+Scanning I2C bus...
+Device found at address: 0x01
+Device found at address: 0x02
+Device found at address: 0x03
+Device found at address: 0x04
+Device found at address: 0x05
+Device found at address: 0x06
+Device found at address: 0x07
+Device found at address: 0x08
+Device found at address: 0x09
+Device found at address: 0x0A
+Device found at address: 0x0B
+Device found at address: 0x0C
+Device found at address: 0x0D
+Device found at address: 0x0E
+Device found at address: 0x0F
+Device found at address: 0x10
+Device found at address: 0x11
+Device found at address: 0x12
+Device found at address: 0x13
+Device found at address: 0x14
+Device found at address: 0x15
+Device found at address: 0x16
+Device found at address: 0x17
+Device found at address: 0x18
+Device found at address: 0x19
+Device found at address: 0x1A
+Device found at address: 0x1B
+Device found at address: 0x1C
+Device found at address: 0x1D
+Device found at address: 0x1E
+Device found at address: 0x1F
+Device found at address: 0x20
+Device found at address: 0x21
+Device found at address: 0x22
+Device found at address: 0x23
+Device found at address: 0x24
+Device found at address: 0x25
+Device found at address: 0x26
+Device found at address: 0x27
+Device found at address: 0x28
+Device found at address: 0x29
+Device found at address: 0x2A
+Device found at address: 0x2B
+Device found at address: 0x2C
+Device found at address: 0x2D
+Device found at address: 0x2E
+Device found at address: 0x2F
+Device found at address: 0x30
+Device found at address: 0x31
+Device found at address: 0x32
+Device found at address: 0x33
+Device found at address: 0x34
+Device found at address: 0x35
+Device found at address: 0x36
+Device found at address: 0x37
+Device found at address: 0x38
+Device found at address: 0x39
+Device found at address: 0x3A
+Device found at address: 0x3B
+Device found at address: 0x3C
+Device found at address: 0x3D
+Device found at address: 0x3E
+Device found at address: 0x3F
+Device found at address: 0x40
+Device found at address: 0x41
+Device found at address: 0x42
+Device found at address: 0x43
+Device found at address: 0x44
+Device found at address: 0x45
+Device found at address: 0x46
+Device found at address: 0x47
+Device found at address: 0x48
+Device found at address: 0x49
+Device found at address: 0x4A
+Device found at address: 0x4B
+Device found at address: 0x4C
+Device found at address: 0x4D
+Device found at address: 0x4E
+Device found at address: 0x4F
+Device found at address: 0x50
+Device found at address: 0x51
+Device found at address: 0x52
+Device found at address: 0x53
+Device found at address: 0x54
+Device found at address: 0x55
+Device found at address: 0x56
+Device found at address: 0x57
+Device found at address: 0x58
+Device found at address: 0x59
+Device found at address: 0x5A
+Device found at address: 0x5B
+Device found at address: 0x5C
+Device found at address: 0x5D
+Device found at address: 0x5E
+Device found at address: 0x5F
+Device found at address: 0x60
+Device found at address: 0x61
+Device found at address: 0x62
+Device found at address: 0x63
+Device found at address: 0x64
+Device found at address: 0x65
+Device found at address: 0x66
+Device found at address: 0x67
+Device found at address: 0x68
+Device found at address: 0x69
+Device found at address: 0x6A
+Device found at address: 0x6B
+Device found at address: 0x6C
+Device found at address: 0x6D
+Device found at address: 0x6E
+Device found at address: 0x6F
+Device found at address: 0x70
+Device found at address: 0x71
+Device found at address: 0x72
+Device found at address: 0x73
+Device found at address: 0x74
+Device found at address: 0x75
+Device found at address: 0x76
+Device found at address: 0x77
+Device found at address: 0x78
+Device found at address: 0x79
+Device found at address: 0x7A
+Device found at address: 0x7B
+Device found at address: 0x7C
+Device found at address: 0x7D
+Device found at address: 0x7E
+Bouton pressé : reboot dans 1 seconde...
+ESP-ROM:esp32c6-20220919
+Build:Sep 19 2022
+rst:0xc (SW_CPU),boot:0x6f (SPI_FAST_FLASH_BOOT)
+Saved PC:0x4001975a
+SPIWP:0xee
+mode:DIO, clock div:2
+load:0x40875730,len:0x1744
+load:0x4086b910,len:0xe78
+load:0x4086e610,len:0x31c8
+entry 0x4086b91a
+[0;32mI (22) boot: ESP-IDF v5.5.1-dirty 2nd stage bootloader[0m
+[0;32mI (22) boot: compile time Oct 15 2025 18:17:57[0m
+[0;32mI (24) boot: chip revision: v0.2[0m
+[0;32mI (24) boot: efuse block revision: v0.3[0m
+[0;32mI (26) boot.esp32c6: SPI Speed      : 80MHz[0m
+[0;32mI (30) boot.esp32c6: SPI Mode       : DIO[0m
+[0;32mI (34) boot.esp32c6: SPI Flash Size : 2MB[0m
+[0;32mI (37) boot: Enabling RNG early entropy source...[0m
+[0;32mI (42) boot: Partition Table:[0m
+[0;32mI (44) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (51) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (57) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (64) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (70) boot: End of partition table[0m
+[0;32mI (74) esp_image: segment 0: paddr=00010020 vaddr=42018020 size=07aach ( 31404) map[0m
+[0;32mI (93) esp_image: segment 1: paddr=00017ad4 vaddr=40800000 size=00544h (  1348) load[0m
+[0;32mI (95) esp_image: segment 2: paddr=00018020 vaddr=42000020 size=114a4h ( 70820) map[0m
+[0;32mI (123) esp_image: segment 3: paddr=000294cc vaddr=40800544 size=0a9d0h ( 43472) load[0m
+[0;32mI (143) esp_image: segment 4: paddr=00033ea4 vaddr=4080af20 size=015d4h (  5588) load[0m
+[0;32mI (152) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (152) boot: Disabling RNG early entropy source...[0m
+[0;32mI (162) cpu_start: Unicore app[0m
+[0;32mI (171) cpu_start: Pro cpu start user code[0m
+[0;32mI (171) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (172) app_init: Application information:[0m
+[0;32mI (172) app_init: Project name:     Espressif[0m
+[0;32mI (175) app_init: App version:      12c14e0-dirty[0m
+[0;32mI (180) app_init: Compile time:     Oct 15 2025 18:17:32[0m
+[0;32mI (185) app_init: ELF file SHA256:  4d32b4cd7...[0m
+[0;32mI (189) app_init: ESP-IDF:          v5.5.1-dirty[0m
+[0;32mI (193) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (197) efuse_init: Max chip rev:     v0.99 [0m
+[0;32mI (201) efuse_init: Chip rev:         v0.2[0m
+[0;32mI (205) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (211) heap_init: At 4080D3F0 len 0006F220 (444 KiB): RAM[0m
+[0;32mI (217) heap_init: At 4087C610 len 00002F54 (11 KiB): RAM[0m
+[0;32mI (222) heap_init: At 50000000 len 00003FE8 (15 KiB): RTCRAM[0m
+[0;32mI (228) spi_flash: detected chip: generic[0m
+[0;32mI (231) spi_flash: flash io: dio[0m
+[0;33mW (234) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (246) sleep_gpio: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (252) sleep_gpio: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (259) main_task: Started on CPU0[0m
+[0;32mI (259) main_task: Calling app_main()[0m
+
+Scanning I2C bus...
+Device found at address: 0x01
+Device found at address: 0x02
+Device found at address: 0x03
+Device found at address: 0x04
+Device found at address: 0x05
+Device found at address: 0x06
+Device found at address: 0x07
+Device found at address: 0x08
+Device found at address: 0x09
+Device found at address: 0x0A
+Device found at address: 0x0B
+Device found at address: 0x0C
+Device found at address: 0x0D
+Device found at address: 0x0E
+Device found at address: 0x0F
+Device found at address: 0x10
+Device found at address: 0x11
+Device found at address: 0x12
+Device found at address: 0x13
+Device found at address: 0x14
+Device found at address: 0x15
+Device found at address: 0x16
+Device found at address: 0x17
+Device found at address: 0x18
+Device found at address: 0x19
+Device found at address: 0x1A
+Device found at address: 0x1B
+Device found at address: 0x1C
+Device found at address: 0x1D
+Device found at address: 0x1E
+Device found at address: 0x1F
+Device found at address: 0x20
+Device found at address: 0x21
+Device found at address: 0x22
+Device found at address: 0x23
+Device found at address: 0x24
+Device found at address: 0x25
+Device found at address: 0x26
+Device found at address: 0x27
+Device found at address: 0x28
+Device found at address: 0x29
+Device found at address: 0x2A
+Device found at address: 0x2B
+Device found at address: 0x2C
+Device found at address: 0x2D
+Device found at address: 0x2E
+Device found at address: 0x2F
+Device found at address: 0x30
+Device found at address: 0x31
+Device found at address: 0x32
+Device found at address: 0x33
+Device found at address: 0x34
+Device found at address: 0x35
+Device found at address: 0x36
+Device found at address: 0x37
+Device found at address: 0x38
+Device found at address: 0x39
+Device found at address: 0x3A
+Device found at address: 0x3B
+Device found at address: 0x3C
+Device found at address: 0x3D
+Device found at address: 0x3E
+Device found at address: 0x3F
+Device found at address: 0x40
+Device found at address: 0x41
+Device found at address: 0x42
+Device found at address: 0x43
+Device found at address: 0x44
+Device found at address: 0x45
+Device found at address: 0x46
+Device found at address: 0x47
+Device found at address: 0x48
+Device found at address: 0x49
+Device found at address: 0x4A
+Device found at address: 0x4B
+Device found at address: 0x4C
+Device found at address: 0x4D
+Device found at address: 0x4E
+Device found at address: 0x4F
+Device found at address: 0x50
+Device found at address: 0x51
+Device found at address: 0x52
+Device found at address: 0x53
+Device found at address: 0x54
+Device found at address: 0x55
+Device found at address: 0x56
+Device found at address: 0x57
+Device found at address: 0x58
+Device found at address: 0x59
+Device found at address: 0x5A
+Device found at address: 0x5B
+Device found at address: 0x5C
+Device found at address: 0x5D
+Device found at address: 0x5E
+Device found at address: 0x5F
+Device found at address: 0x60
+Device found at address: 0x61
+Device found at address: 0x62
+Device found at address: 0x63
+Device found at address: 0x64
+Device found at address: 0x65
+Device found at address: 0x66
+Device found at address: 0x67
+Device found at address: 0x68
+Device found at address: 0x69
+Device found at address: 0x6A
+Device found at address: 0x6B
+Device found at address: 0x6C
+Device found at address: 0x6D
+Device found at address: 0x6E
+Device found at address: 0x6F
+Device found at address: 0x70
+Device found at address: 0x71
+Device found at address: 0x72
+Device found at address: 0x73
+Device found at address: 0x74
+Device found at address: 0x75
+Device found at address: 0x76
+Device found at address: 0x77
+Device found at address: 0x78
+Device found at address: 0x79
+Device found at address: 0x7A
+Device found at address: 0x7B
+Device found at address: 0x7C
+Device found at address: 0x7D
+Device found at address: 0x7E
+Bouton pressé : reboot dans 1 seconde...
+ESP-ROM:esp32c6-20220919
+Build:Sep 19 2022
+rst:0xc (SW_CPU),boot:0x6f (SPI_FAST_FLASH_BOOT)
+Saved PC:0x4001975a
+SPIWP:0xee
+mode:DIO, clock div:2
+load:0x40875730,len:0x1744
+load:0x4086b910,len:0xe78
+load:0x4086e610,len:0x31c8
+entry 0x4086b91a
+[0;32mI (22) boot: ESP-IDF v5.5.1-dirty 2nd stage bootloader[0m
+[0;32mI (22) boot: compile time Oct 15 2025 18:17:57[0m
+[0;32mI (24) boot: chip revision: v0.2[0m
+[0;32mI (24) boot: efuse block revision: v0.3[0m
+[0;32mI (26) boot.esp32c6: SPI Speed      : 80MHz[0m
+[0;32mI (30) boot.esp32c6: SPI Mode       : DIO[0m
+[0;32mI (34) boot.esp32c6: SPI Flash Size : 2MB[0m
+[0;32mI (37) boot: Enabling RNG early entropy source...[0m
+[0;32mI (42) boot: Partition Table:[0m
+[0;32mI (44) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (51) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (57) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (64) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (70) boot: End of partition table[0m
+[0;32mI (74) esp_image: segment 0: paddr=00010020 vaddr=42018020 size=07aach ( 31404) map[0m
+[0;32mI (93) esp_image: segment 1: paddr=00017ad4 vaddr=40800000 size=00544h (  1348) load[0m
+[0;32mI (95) esp_image: segment 2: paddr=00018020 vaddr=42000020 size=114a4h ( 70820) map[0m
+[0;32mI (123) esp_image: segment 3: paddr=000294cc vaddr=40800544 size=0a9d0h ( 43472) load[0m
+[0;32mI (143) esp_image: segment 4: paddr=00033ea4 vaddr=4080af20 size=015d4h (  5588) load[0m
+[0;32mI (152) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (152) boot: Disabling RNG early entropy source...[0m
+[0;32mI (162) cpu_start: Unicore app[0m
+[0;32mI (171) cpu_start: Pro cpu start user code[0m
+[0;32mI (171) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (172) app_init: Application information:[0m
+[0;32mI (172) app_init: Project name:     Espressif[0m
+[0;32mI (175) app_init: App version:      12c14e0-dirty[0m
+[0;32mI (180) app_init: Compile time:     Oct 15 2025 18:17:32[0m
+[0;32mI (185) app_init: ELF file SHA256:  4d32b4cd7...[0m
+[0;32mI (189) app_init: ESP-IDF:          v5.5.1-dirty[0m
+[0;32mI (193) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (197) efuse_init: Max chip rev:     v0.99 [0m
+[0;32mI (201) efuse_init: Chip rev:         v0.2[0m
+[0;32mI (205) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (211) heap_init: At 4080D3F0 len 0006F220 (444 KiB): RAM[0m
+[0;32mI (216) heap_init: At 4087C610 len 00002F54 (11 KiB): RAM[0m
+[0;32mI (222) heap_init: At 50000000 len 00003FE8 (15 KiB): RTCRAM[0m
+[0;32mI (228) spi_flash: detected chip: generic[0m
+[0;32mI (231) spi_flash: flash io: dio[0m
+[0;33mW (234) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (246) sleep_gpio: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (252) sleep_gpio: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (259) main_task: Started on CPU0[0m
+[0;32mI (259) main_task: Calling app_main()[0m
+
+Scanning I2C bus...
+Device found at address: 0x01
+Device found at address: 0x02
+Device found at address: 0x03
+Device found at address: 0x04
+Device found at address: 0x05
+Device found at address: 0x06
+Device found at address: 0x07
+Device found at address: 0x08
+Device found at address: 0x09
+Device found at address: 0x0A
+Device found at address: 0x0B
+Device found at address: 0x0C
+Device found at address: 0x0D
+Device found at address: 0x0E
+Device found at address: 0x0F
+Device found at address: 0x10
+Device found at address: 0x11
+Device found at address: 0x12
+Device found at address: 0x13
+Device found at address: 0x14
+Device found at address: 0x15
+Device found at address: 0x16
+Device found at address: 0x17
+Device found at address: 0x18
+Device found at address: 0x19
+Device found at address: 0x1A
+Device found at address: 0x1B
+Device found at address: 0x1C
+Device found at address: 0x1D
+Device found at address: 0x1E
+Device found at address: 0x1F
+Device found at address: 0x20
+Device found at address: 0x21
+Device found at address: 0x22
+Device found at address: 0x23
+Device found at address: 0x24
+Device found at address: 0x25
+Device found at address: 0x26
+Device found at address: 0x27
+Device found at address: 0x28
+Device found at address: 0x29
+Device found at address: 0x2A
+Device found at address: 0x2B
+Device found at address: 0x2C
+Device found at address: 0x2D
+Device found at address: 0x2E
+Device found at address: 0x2F
+Device found at address: 0x30
+Device found at address: 0x31
+Device found at address: 0x32
+Device found at address: 0x33
+Device found at address: 0x34
+Device found at address: 0x35
+Device found at address: 0x36
+Device found at address: 0x37
+Device found at address: 0x38
+Device found at address: 0x39
+Device found at address: 0x3A
+Device found at address: 0x3B
+Device found at address: 0x3C
+Device found at address: 0x3D
+Device found at address: 0x3E
+Device found at address: 0x3F
+Device found at address: 0x40
+Device found at address: 0x41
+Device found at address: 0x42
+Device found at address: 0x43
+Device found at address: 0x44
+Device found at address: 0x45
+Device found at address: 0x46
+Device found at address: 0x47
+Device found at address: 0x48
+Device found at address: 0x49
+Device found at address: 0x4A
+Device found at address: 0x4B
+Device found at address: 0x4C
+Device found at address: 0x4D
+Device found at address: 0x4E
+Device found at address: 0x4F
+Device found at address: 0x50
+Device found at address: 0x51
+Device found at address: 0x52
+Device found at address: 0x53
+Device found at address: 0x54
+Device found at address: 0x55
+Device found at address: 0x56
+Device found at address: 0x57
+Device found at address: 0x58
+Device found at address: 0x59
+Device found at address: 0x5A
+Device found at address: 0x5B
+Device found at address: 0x5C
+Device found at address: 0x5D
+Device found at address: 0x5E
+Device found at address: 0x5F
+Device found at address: 0x60
+Device found at address: 0x61
+Device found at address: 0x62
+Device found at address: 0x63
+Device found at address: 0x64
+Device found at address: 0x65
+Device found at address: 0x66
+Device found at address: 0x67
+Device found at address: 0x68
+Device found at address: 0x69
+Device found at address: 0x6A
+Device found at address: 0x6B
+Device found at address: 0x6C
+Device found at address: 0x6D
+Device found at address: 0x6E
+Device found at address: 0x6F
+Device found at address: 0x70
+Device found at address: 0x71
+Device found at address: 0x72
+Device found at address: 0x73
+Device found at address: 0x74
+Device found at address: 0x75
+Device found at address: 0x76
+Device found at address: 0x77
+Device found at address: 0x78
+Device found at address: 0x79
+Device found at address: 0x7A
+Device found at address: 0x7B
+Device found at address: 0x7C
+Device found at address: 0x7D
+Device found at address: 0x7E
+Bouton pressé : reboot dans 1 seconde...
+ESP-ROM:esp32c6-20220919
+Build:Sep 19 2022
+rst:0xc (SW_CPU),boot:0x6f (SPI_FAST_FLASH_BOOT)
+Saved PC:0x4001975a
+SPIWP:0xee
+mode:DIO, clock div:2
+load:0x40875730,len:0x1744
+load:0x4086b910,len:0xe78
+load:0x4086e610,len:0x31c8
+entry 0x4086b91a
+[0;32mI (22) boot: ESP-IDF v5.5.1-dirty 2nd stage bootloader[0m
+[0;32mI (22) boot: compile time Oct 15 2025 18:17:57[0m
+[0;32mI (24) boot: chip revision: v0.2[0m
+[0;32mI (24) boot: efuse block revision: v0.3[0m
+[0;32mI (26) boot.esp32c6: SPI Speed      : 80MHz[0m
+[0;32mI (30) boot.esp32c6: SPI Mode       : DIO[0m
+[0;32mI (34) boot.esp32c6: SPI Flash Size : 2MB[0m
+[0;32mI (37) boot: Enabling RNG early entropy source...[0m
+[0;32mI (42) boot: Partition Table:[0m
+[0;32mI (44) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (51) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (57) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (64) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (70) boot: End of partition table[0m
+[0;32mI (74) esp_image: segment 0: paddr=00010020 vaddr=42018020 size=07aach ( 31404) map[0m
+[0;32mI (93) esp_image: segment 1: paddr=00017ad4 vaddr=40800000 size=00544h (  1348) load[0m
+[0;32mI (95) esp_image: segment 2: paddr=00018020 vaddr=42000020 size=114a4h ( 70820) map[0m
+[0;32mI (123) esp_image: segment 3: paddr=000294cc vaddr=40800544 size=0a9d0h ( 43472) load[0m
+[0;32mI (143) esp_image: segment 4: paddr=00033ea4 vaddr=4080af20 size=015d4h (  5588) load[0m
+[0;32mI (152) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (152) boot: Disabling RNG early entropy source...[0m
+[0;32mI (162) cpu_start: Unicore app[0m
+[0;32mI (171) cpu_start: Pro cpu start user code[0m
+[0;32mI (171) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (172) app_init: Application information:[0m
+[0;32mI (172) app_init: Project name:     Espressif[0m
+[0;32mI (175) app_init: App version:      12c14e0-dirty[0m
+[0;32mI (180) app_init: Compile time:     Oct 15 2025 18:17:32[0m
+[0;32mI (185) app_init: ELF file SHA256:  4d32b4cd7...[0m
+[0;32mI (189) app_init: ESP-IDF:          v5.5.1-dirty[0m
+[0;32mI (193) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (197) efuse_init: Max chip rev:     v0.99 [0m
+[0;32mI (201) efuse_init: Chip rev:         v0.2[0m
+[0;32mI (205) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (211) heap_init: At 4080D3F0 len 0006F220 (444 KiB): RAM[0m
+[0;32mI (216) heap_init: At 4087C610 len 00002F54 (11 KiB): RAM[0m
+[0;32mI (222) heap_init: At 50000000 len 00003FE8 (15 KiB): RTCRAM[0m
+[0;32mI (228) spi_flash: detected chip: generic[0m
+[0;32mI (231) spi_flash: flash io: dio[0m
+[0;33mW (234) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (246) sleep_gpio: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (252) sleep_gpio: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (259) main_task: Started on CPU0[0m
+[0;32mI (259) main_task: Calling app_main()[0m
+
+Scanning I2C bus...
+Device found at address: 0x01
+Device found at address: 0x02
+Device found at address: 0x03
+Device found at address: 0x04
+Device found at address: 0x05
+Device found at address: 0x06
+Device found at address: 0x07
+Device found at address: 0x08
+Device found at address: 0x09
+Device found at address: 0x0A
+Device found at address: 0x0B
+Device found at address: 0x0C
+Device found at address: 0x0D
+Device found at address: 0x0E
+Device found at address: 0x0F
+Device found at address: 0x10
+Device found at address: 0x11
+Device found at address: 0x12
+Device found at address: 0x13
+Device found at address: 0x14
+Device found at address: 0x15
+Device found at address: 0x16
+Device found at address: 0x17
+Device found at address: 0x18
+Device found at address: 0x19
+Device found at address: 0x1A
+Device found at address: 0x1B
+Device found at address: 0x1C
+Device found at address: 0x1D
+Device found at address: 0x1E
+Device found at address: 0x1F
+Device found at address: 0x20
+Device found at address: 0x21
+Device found at address: 0x22
+Device found at address: 0x23
+Device found at address: 0x24
+Device found at address: 0x25
+Device found at address: 0x26
+Device found at address: 0x27
+Device found at address: 0x28
+Device found at address: 0x29
+Device found at address: 0x2A
+Device found at address: 0x2B
+Device found at address: 0x2C
+Device found at address: 0x2D
+Device found at address: 0x2E
+Device found at address: 0x2F
+Device found at address: 0x30
+Device found at address: 0x31
+Device found at address: 0x32
+Device found at address: 0x33
+Device found at address: 0x34
+Device found at address: 0x35
+Device found at address: 0x36
+Device found at address: 0x37
+Device found at address: 0x38
+Device found at address: 0x39
+Device found at address: 0x3A
+Device found at address: 0x3B
+Device found at address: 0x3C
+Device found at address: 0x3D
+Device found at address: 0x3E
+Device found at address: 0x3F
+Device found at address: 0x40
+Device found at address: 0x41
+Device found at address: 0x42
+Device found at address: 0x43
+Device found at address: 0x44
+Device found at address: 0x45
+Device found at address: 0x46
+Device found at address: 0x47
+Device found at address: 0x48
+Device found at address: 0x49
+Device found at address: 0x4A
+Device found at address: 0x4B
+Device found at address: 0x4C
+Device found at address: 0x4D
+Device found at address: 0x4E
+Device found at address: 0x4F
+Device found at address: 0x50
+Device found at address: 0x51
+Device found at address: 0x52
+Device found at address: 0x53
+Device found at address: 0x54
+Device found at address: 0x55
+Device found at address: 0x56
+Device found at address: 0x57
+Device found at address: 0x58
+Device found at address: 0x59
+Device found at address: 0x5A
+Device found at address: 0x5B
+Device found at address: 0x5C
+Device found at address: 0x5D
+Device found at address: 0x5E
+Device found at address: 0x5F
+Device found at address: 0x60
+Device found at address: 0x61
+Device found at address: 0x62
+Device found at address: 0x63
+Device found at address: 0x64
+Device found at address: 0x65
+Device found at address: 0x66
+Device found at address: 0x67
+Device found at address: 0x68
+Device found at address: 0x69
+Device found at address: 0x6A
+Device found at address: 0x6B
+Device found at address: 0x6C
+Device found at address: 0x6D
+Device found at address: 0x6E
+Device found at address: 0x6F
+Device found at address: 0x70
+Device found at address: 0x71
+Device found at address: 0x72
+Device found at address: 0x73
+Device found at address: 0x74
+Device found at address: 0x75
+Device found at address: 0x76
+Device found at address: 0x77
+Device found at address: 0x78
+Device found at address: 0x79
+Device found at address: 0x7A
+Device found at address: 0x7B
+Device found at address: 0x7C
+Device found at address: 0x7D
+Device found at address: 0x7E
+Bouton pressé : reboot dans 1 seconde...
+ESP-ROM:esp32c6-20220919
+Build:Sep 19 2022
+rst:0xc (SW_CPU),boot:0x6f (SPI_FAST_FLASH_BOOT)
+Saved PC:0x4001975a
+SPIWP:0xee
+mode:DIO, clock div:2
+load:0x40875730,len:0x1744
+load:0x4086b910,len:0xe78
+load:0x4086e610,len:0x31c8
+entry 0x4086b91a
+[0;32mI (22) boot: ESP-IDF v5.5.1-dirty 2nd stage bootloader[0m
+[0;32mI (22) boot: compile time Oct 15 2025 18:17:57[0m
+[0;32mI (24) boot: chip revision: v0.2[0m
+[0;32mI (24) boot: efuse block revision: v0.3[0m
+[0;32mI (26) boot.esp32c6: SPI Speed      : 80MHz[0m
+[0;32mI (30) boot.esp32c6: SPI Mode       : DIO[0m
+[0;32mI (34) boot.esp32c6: SPI Flash Size : 2MB[0m
+[0;32mI (37) boot: Enabling RNG early entropy source...[0m
+[0;32mI (42) boot: Partition Table:[0m
+[0;32mI (44) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (51) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (57) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (64) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (70) boot: End of partition table[0m
+[0;32mI (74) esp_image: segment 0: paddr=00010020 vaddr=42018020 size=07aach ( 31404) map[0m
+[0;32mI (93) esp_image: segment 1: paddr=00017ad4 vaddr=40800000 size=00544h (  1348) load[0m
+[0;32mI (95) esp_image: segment 2: paddr=00018020 vaddr=42000020 size=114a4h ( 70820) map[0m
+[0;32mI (123) esp_image: segment 3: paddr=000294cc vaddr=40800544 size=0a9d0h ( 43472) load[0m
+[0;32mI (143) esp_image: segment 4: paddr=00033ea4 vaddr=4080af20 size=015d4h (  5588) load[0m
+[0;32mI (152) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (152) boot: Disabling RNG early entropy source...[0m
+[0;32mI (162) cpu_start: Unicore app[0m
+[0;32mI (171) cpu_start: Pro cpu start user code[0m
+[0;32mI (171) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (172) app_init: Application information:[0m
+[0;32mI (172) app_init: Project name:     Espressif[0m
+[0;32mI (175) app_init: App version:      12c14e0-dirty[0m
+[0;32mI (180) app_init: Compile time:     Oct 15 2025 18:17:32[0m
+[0;32mI (185) app_init: ELF file SHA256:  4d32b4cd7...[0m
+[0;32mI (189) app_init: ESP-IDF:          v5.5.1-dirty[0m
+[0;32mI (193) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (197) efuse_init: Max chip rev:     v0.99 [0m
+[0;32mI (201) efuse_init: Chip rev:         v0.2[0m
+[0;32mI (205) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (211) heap_init: At 4080D3F0 len 0006F220 (444 KiB): RAM[0m
+[0;32mI (217) heap_init: At 4087C610 len 00002F54 (11 KiB): RAM[0m
+[0;32mI (222) heap_init: At 50000000 len 00003FE8 (15 KiB): RTCRAM[0m
+[0;32mI (228) spi_flash: detected chip: generic[0m
+[0;32mI (231) spi_flash: flash io: dio[0m
+[0;33mW (234) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (246) sleep_gpio: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (252) sleep_gpio: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (259) main_task: Started on CPU0[0m
+[0;32mI (259) main_task: Calling app_main()[0m
+
+Scanning I2C bus...
+Device found at address: 0x01
+Device found at address: 0x02
+Device found at address: 0x03
+Device found at address: 0x04
+Device found at address: 0x05
+Device found at address: 0x06
+Device found at address: 0x07
+Device found at address: 0x08
+Device found at address: 0x09
+Device found at address: 0x0A
+Device found at address: 0x0B
+Device found at address: 0x0C
+Device found at address: 0x0D
+Device found at address: 0x0E
+Device found at address: 0x0F
+Device found at address: 0x10
+Device found at address: 0x11
+Device found at address: 0x12
+Device found at address: 0x13
+Device found at address: 0x14
+Device found at address: 0x15
+Device found at address: 0x16
+Device found at address: 0x17
+Device found at address: 0x18
+Device found at address: 0x19
+Device found at address: 0x1A
+Device found at address: 0x1B
+Device found at address: 0x1C
+Device found at address: 0x1D
+Device found at address: 0x1E
+Device found at address: 0x1F
+Device found at address: 0x20
+Device found at address: 0x21
+Device found at address: 0x22
+Device found at address: 0x23
+Device found at address: 0x24
+Device found at address: 0x25
+Device found at address: 0x26
+Device found at address: 0x27
+Device found at address: 0x28
+Device found at address: 0x29
+Device found at address: 0x2A
+Device found at address: 0x2B
+Device found at address: 0x2C
+Device found at address: 0x2D
+Device found at address: 0x2E
+Device found at address: 0x2F
+Device found at address: 0x30
+Device found at address: 0x31
+Device found at address: 0x32
+Device found at address: 0x33
+Device found at address: 0x34
+Device found at address: 0x35
+Device found at address: 0x36
+Device found at address: 0x37
+Device found at address: 0x38
+Device found at address: 0x39
+Device found at address: 0x3A
+Device found at address: 0x3B
+Device found at address: 0x3C
+Device found at address: 0x3D
+Device found at address: 0x3E
+Device found at address: 0x3F
+Device found at address: 0x40
+Device found at address: 0x41
+Device found at address: 0x42
+Device found at address: 0x43
+Device found at address: 0x44
+Device found at address: 0x45
+Device found at address: 0x46
+Device found at address: 0x47
+Device found at address: 0x48
+Device found at address: 0x49
+Device found at address: 0x4A
+Device found at address: 0x4B
+Device found at address: 0x4C
+Device found at address: 0x4D
+Device found at address: 0x4E
+Device found at address: 0x4F
+Device found at address: 0x50
+Device found at address: 0x51
+Device found at address: 0x52
+Device found at address: 0x53
+Device found at address: 0x54
+Device found at address: 0x55
+Device found at address: 0x56
+Device found at address: 0x57
+Device found at address: 0x58
+Device found at address: 0x59
+Device found at address: 0x5A
+Device found at address: 0x5B
+Device found at address: 0x5C
+Device found at address: 0x5D
+Device found at address: 0x5E
+Device found at address: 0x5F
+Device found at address: 0x60
+Device found at address: 0x61
+Device found at address: 0x62
+Device found at address: 0x63
+Device found at address: 0x64
+Device found at address: 0x65
+Device found at address: 0x66
+Device found at address: 0x67
+Device found at address: 0x68
+Device found at address: 0x69
+Device found at address: 0x6A
+Device found at address: 0x6B
+Device found at address: 0x6C
+Device found at address: 0x6D
+Device found at address: 0x6E
+Device found at address: 0x6F
+Device found at address: 0x70
+Device found at address: 0x71
+Device found at address: 0x72
+Device found at address: 0x73
+Device found at address: 0x74
+Device found at address: 0x75
+Device found at address: 0x76
+Device found at address: 0x77
+Device found at address: 0x78
+Device found at address: 0x79
+Device found at address: 0x7A
+Device found at address: 0x7B
+Device found at address: 0x7C
+Device found at address: 0x7D
+Device found at address: 0x7E
+Bouton pressé : reboot dans 1 seconde...
+ESP-ROM:esp32c6-20220919
+Build:Sep 19 2022
+rst:0xc (SW_CPU),boot:0x6f (SPI_FAST_FLASH_BOOT)
+Saved PC:0x4001975a
+SPIWP:0xee
+mode:DIO, clock div:2
+load:0x40875730,len:0x1744
+load:0x4086b910,len:0xe78
+load:0x4086e610,len:0x31c8
+entry 0x4086b91a
+[0;32mI (22) boot: ESP-IDF v5.5.1-dirty 2nd stage bootloader[0m
+[0;32mI (22) boot: compile time Oct 15 2025 18:17:57[0m
+[0;32mI (24) boot: chip revision: v0.2[0m
+[0;32mI (24) boot: efuse block revision: v0.3[0m
+[0;32mI (26) boot.esp32c6: SPI Speed      : 80MHz[0m
+[0;32mI (30) boot.esp32c6: SPI Mode       : DIO[0m
+[0;32mI (34) boot.esp32c6: SPI Flash Size : 2MB[0m
+[0;32mI (37) boot: Enabling RNG early entropy source...[0m
+[0;32mI (42) boot: Partition Table:[0m
+[0;32mI (44) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (51) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (57) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (64) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (70) boot: End of partition table[0m
+[0;32mI (74) esp_image: segment 0: paddr=00010020 vaddr=42018020 size=07aach ( 31404) map[0m
+[0;32mI (93) esp_image: segment 1: paddr=00017ad4 vaddr=40800000 size=00544h (  1348) load[0m
+[0;32mI (95) esp_image: segment 2: paddr=00018020 vaddr=42000020 size=114a4h ( 70820) map[0m
+[0;32mI (123) esp_image: segment 3: paddr=000294cc vaddr=40800544 size=0a9d0h ( 43472) load[0m
+[0;32mI (143) esp_image: segment 4: paddr=00033ea4 vaddr=4080af20 size=015d4h (  5588) load[0m
+[0;32mI (152) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (152) boot: Disabling RNG early entropy source...[0m
+[0;32mI (162) cpu_start: Unicore app[0m
+[0;32mI (171) cpu_start: Pro cpu start user code[0m
+[0;32mI (171) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (172) app_init: Application information:[0m
+[0;32mI (172) app_init: Project name:     Espressif[0m
+[0;32mI (175) app_init: App version:      12c14e0-dirty[0m
+[0;32mI (180) app_init: Compile time:     Oct 15 2025 18:17:32[0m
+[0;32mI (185) app_init: ELF file SHA256:  4d32b4cd7...[0m
+[0;32mI (189) app_init: ESP-IDF:          v5.5.1-dirty[0m
+[0;32mI (194) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (197) efuse_init: Max chip rev:     v0.99 [0m
+[0;32mI (201) efuse_init: Chip rev:         v0.2[0m
+[0;32mI (205) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (211) heap_init: At 4080D3F0 len 0006F220 (444 KiB): RAM[0m
+[0;32mI (217) heap_init: At 4087C610 len 00002F54 (11 KiB): RAM[0m
+[0;32mI (222) heap_init: At 50000000 len 00003FE8 (15 KiB): RTCRAM[0m
+[0;32mI (228) spi_flash: detected chip: generic[0m
+[0;32mI (231) spi_flash: flash io: dio[0m
+[0;33mW (234) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (246) sleep_gpio: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (252) sleep_gpio: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (259) main_task: Started on CPU0[0m
+[0;32mI (259) main_task: Calling app_main()[0m
+
+Scanning I2C bus...
+Device found at address: 0x01
+Device found at address: 0x02
+Device found at address: 0x03
+Device found at address: 0x04
+Device found at address: 0x05
+Device found at address: 0x06
+Device found at address: 0x07
+Device found at address: 0x08
+Device found at address: 0x09
+Device found at address: 0x0A
+Device found at address: 0x0B
+Device found at address: 0x0C
+Device found at address: 0x0D
+Device found at address: 0x0E
+Device found at address: 0x0F
+Device found at address: 0x10
+Device found at address: 0x11
+Device found at address: 0x12
+Device found at address: 0x13
+Device found at address: 0x14
+Device found at address: 0x15
+Device found at address: 0x16
+Device found at address: 0x17
+Device found at address: 0x18
+Device found at address: 0x19
+Device found at address: 0x1A
+Device found at address: 0x1B
+Device found at address: 0x1C
+Device found at address: 0x1D
+Device found at address: 0x1E
+Device found at address: 0x1F
+Device found at address: 0x20
+Device found at address: 0x21
+Device found at address: 0x22
+Device found at address: 0x23
+Device found at address: 0x24
+Device found at address: 0x25
+Device found at address: 0x26
+Device found at address: 0x27
+Device found at address: 0x28
+Device found at address: 0x29
+Device found at address: 0x2A
+Device found at address: 0x2B
+Device found at address: 0x2C
+Device found at address: 0x2D
+Device found at address: 0x2E
+Device found at address: 0x2F
+Device found at address: 0x30
+Device found at address: 0x31
+Device found at address: 0x32
+Device found at address: 0x33
+Device found at address: 0x34
+Device found at address: 0x35
+Device found at address: 0x36
+Device found at address: 0x37
+Device found at address: 0x38
+Device found at address: 0x39
+Device found at address: 0x3A
+Device found at address: 0x3B
+Device found at address: 0x3C
+Device found at address: 0x3D
+Device found at address: 0x3E
+Device found at address: 0x3F
+Device found at address: 0x40
+Device found at address: 0x41
+Device found at address: 0x42
+Device found at address: 0x43
+Device found at address: 0x44
+Device found at address: 0x45
+Device found at address: 0x46
+Device found at address: 0x47
+Device found at address: 0x48
+Device found at address: 0x49
+Device found at address: 0x4A
+Device found at address: 0x4B
+Device found at address: 0x4C
+Device found at address: 0x4D
+Device found at address: 0x4E
+Device found at address: 0x4F
+Device found at address: 0x50
+Device found at address: 0x51
+Device found at address: 0x52
+Device found at address: 0x53
+Device found at address: 0x54
+Device found at address: 0x55
+Device found at address: 0x56
+Device found at address: 0x57
+Device found at address: 0x58
+Device found at address: 0x59
+Device found at address: 0x5A
+Device found at address: 0x5B
+Device found at address: 0x5C
+Device found at address: 0x5D
+Device found at address: 0x5E
+Device found at address: 0x5F
+Device found at address: 0x60
+Device found at address: 0x61
+Device found at address: 0x62
+Device found at address: 0x63
+Device found at address: 0x64
+Device found at address: 0x65
+Device found at address: 0x66
+Device found at address: 0x67
+Device found at address: 0x68
+Device found at address: 0x69
+Device found at address: 0x6A
+Device found at address: 0x6B
+Device found at address: 0x6C
+Device found at address: 0x6D
+Device found at address: 0x6E
+Device found at address: 0x6F
+Device found at address: 0x70
+Device found at address: 0x71
+Device found at address: 0x72
+Device found at address: 0x73
+Device found at address: 0x74
+Device found at address: 0x75
+Device found at address: 0x76
+Device found at address: 0x77
+Device found at address: 0x78
+Device found at address: 0x79
+Device found at address: 0x7A
+Device found at address: 0x7B
+Device found at address: 0x7C
+Device found at address: 0x7D
+Device found at address: 0x7E
+[0;32mI (2689) MPU6050: Accel: X=1208, Y=-192, Z=17668[0m
+[0;32mI (2689) MPU6050: Gyro: X=-255, Y=125, Z=276[0m
+[0;32mI (3689) MPU6050: Accel: X=1416, Y=-160, Z=17736[0m
+[0;32mI (3689) MPU6050: Gyro: X=-219, Y=60, Z=264[0m
+[0;32mI (4689) MPU6050: Accel: X=1340, Y=-216, Z=17712[0m
+[0;32mI (4689) MPU6050: Gyro: X=-227, Y=126, Z=261[0m
+[0;32mI (5689) MPU6050: Accel: X=1384, Y=-212, Z=17792[0m
+[0;32mI (5689) MPU6050: Gyro: X=-245, Y=102, Z=279[0m
+[0;32mI (6689) MPU6050: Accel: X=1324, Y=-172, Z=17712[0m
+[0;32mI (6689) MPU6050: Gyro: X=-223, Y=113, Z=265[0m
+[0;32mI (7689) MPU6050: Accel: X=1356, Y=-228, Z=17680[0m
+[0;32mI (7689) MPU6050: Gyro: X=-236, Y=100, Z=229[0m
+[0;32mI (8689) MPU6050: Accel: X=1096, Y=-256, Z=17664[0m
+[0;32mI (8689) MPU6050: Gyro: X=-133, Y=366, Z=1077[0m
+[0;32mI (9689) MPU6050: Accel: X=1152, Y=-224, Z=17668[0m
+[0;32mI (9689) MPU6050: Gyro: X=-203, Y=62, Z=301[0m
+[0;32mI (10689) MPU6050: Accel: X=1052, Y=-8, Z=17848[0m
+[0;32mI (10689) MPU6050: Gyro: X=124, Y=-353, Z=30[0m
+[0;32mI (11689) MPU6050: Accel: X=1232, Y=-128, Z=17640[0m
+[0;32mI (11689) MPU6050: Gyro: X=-243, Y=151, Z=227[0m
+[0;32mI (12689) MPU6050: Accel: X=1080, Y=-176, Z=17712[0m
+[0;32mI (12689) MPU6050: Gyro: X=-251, Y=125, Z=255[0m
+[0;32mI (13689) MPU6050: Accel: X=1296, Y=-120, Z=17704[0m
+[0;32mI (13689) MPU6050: Gyro: X=-296, Y=-41, Z=13[0m
+[0;32mI (14689) MPU6050: Accel: X=1296, Y=-148, Z=17668[0m
+[0;32mI (14689) MPU6050: Gyro: X=-223, Y=94, Z=256[0m
+[0;32mI (15689) MPU6050: Accel: X=1324, Y=-216, Z=17728[0m
+[0;32mI (15689) MPU6050: Gyro: X=-238, Y=88, Z=255[0m
+[0;32mI (16689) MPU6050: Accel: X=1296, Y=-160, Z=17848[0m
+[0;32mI (16689) MPU6050: Gyro: X=-236, Y=69, Z=294[0m
+Bouton pressé : reboot dans 1 seconde...
+ESP-ROM:esp32c6-20220919
+Build:Sep 19 2022
+rst:0xc (SW_CPU),boot:0x6f (SPI_FAST_FLASH_BOOT)
+Saved PC:0x4001975a
+SPIWP:0xee
+mode:DIO, clock div:2
+load:0x40875730,len:0x1744
+load:0x4086b910,len:0xe78
+load:0x4086e610,len:0x31c8
+entry 0x4086b91a
+[0;32mI (22) boot: ESP-IDF v5.5.1-dirty 2nd stage bootloader[0m
+[0;32mI (22) boot: compile time Oct 15 2025 18:17:57[0m
+[0;32mI (24) boot: chip revision: v0.2[0m
+[0;32mI (24) boot: efuse block revision: v0.3[0m
+[0;32mI (26) boot.esp32c6: SPI Speed      : 80MHz[0m
+[0;32mI (30) boot.esp32c6: SPI Mode       : DIO[0m
+[0;32mI (34) boot.esp32c6: SPI Flash Size : 2MB[0m
+[0;32mI (37) boot: Enabling RNG early entropy source...[0m
+[0;32mI (42) boot: Partition Table:[0m
+[0;32mI (44) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (51) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (57) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (64) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (70) boot: End of partition table[0m
+[0;32mI (74) esp_image: segment 0: paddr=00010020 vaddr=42018020 size=07aach ( 31404) map[0m
+[0;32mI (93) esp_image: segment 1: paddr=00017ad4 vaddr=40800000 size=00544h (  1348) load[0m
+[0;32mI (95) esp_image: segment 2: paddr=00018020 vaddr=42000020 size=114a4h ( 70820) map[0m
+[0;32mI (123) esp_image: segment 3: paddr=000294cc vaddr=40800544 size=0a9d0h ( 43472) load[0m
+[0;32mI (143) esp_image: segment 4: paddr=00033ea4 vaddr=4080af20 size=015d4h (  5588) load[0m
+[0;32mI (152) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (152) boot: Disabling RNG early entropy source...[0m
+[0;32mI (162) cpu_start: Unicore app[0m
+[0;32mI (171) cpu_start: Pro cpu start user code[0m
+[0;32mI (171) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (172) app_init: Application information:[0m
+[0;32mI (172) app_init: Project name:     Espressif[0m
+[0;32mI (175) app_init: App version:      12c14e0-dirty[0m
+[0;32mI (180) app_init: Compile time:     Oct 15 2025 18:17:32[0m
+[0;32mI (185) app_init: ELF file SHA256:  4d32b4cd7...[0m
+[0;32mI (189) app_init: ESP-IDF:          v5.5.1-dirty[0m
+[0;32mI (193) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (197) efuse_init: Max chip rev:     v0.99 [0m
+[0;32mI (201) efuse_init: Chip rev:         v0.2[0m
+[0;32mI (205) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (211) heap_init: At 4080D3F0 len 0006F220 (444 KiB): RAM[0m
+[0;32mI (216) heap_init: At 4087C610 len 00002F54 (11 KiB): RAM[0m
+[0;32mI (222) heap_init: At 50000000 len 00003FE8 (15 KiB): RTCRAM[0m
+[0;32mI (228) spi_flash: detected chip: generic[0m
+[0;32mI (231) spi_flash: flash io: dio[0m
+[0;33mW (234) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (246) sleep_gpio: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (252) sleep_gpio: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (259) main_task: Started on CPU0[0m
+[0;32mI (259) main_task: Calling app_main()[0m
+
+Scanning I2C bus...
+Device found at address: 0x01
+Device found at address: 0x02
+Device found at address: 0x03
+Device found at address: 0x04
+Device found at address: 0x05
+Device found at address: 0x06
+Device found at address: 0x07
+Device found at address: 0x08
+Device found at address: 0x09
+Device found at address: 0x0A
+Device found at address: 0x0B
+Device found at address: 0x0C
+Device found at address: 0x0D
+Device found at address: 0x0E
+Device found at address: 0x0F
+Device found at address: 0x10
+Device found at address: 0x11
+Device found at address: 0x12
+Device found at address: 0x13
+Device found at address: 0x14
+Device found at address: 0x15
+Device found at address: 0x16
+Device found at address: 0x17
+Device found at address: 0x18
+Device found at address: 0x19
+Device found at address: 0x1A
+Device found at address: 0x1B
+Device found at address: 0x1C
+Device found at address: 0x1D
+Device found at address: 0x1E
+Device found at address: 0x1F
+Device found at address: 0x20
+Device found at address: 0x21
+Device found at address: 0x22
+Device found at address: 0x23
+Device found at address: 0x24
+Device found at address: 0x25
+Device found at address: 0x26
+Device found at address: 0x27
+Device found at address: 0x28
+Device found at address: 0x29
+Device found at address: 0x2A
+Device found at address: 0x2B
+Device found at address: 0x2C
+Device found at address: 0x2D
+Device found at address: 0x2E
+Device found at address: 0x2F
+Device found at address: 0x30
+Device found at address: 0x31
+Device found at address: 0x32
+Device found at address: 0x33
+Device found at address: 0x34
+Device found at address: 0x35
+Device found at address: 0x36
+Device found at address: 0x37
+Device found at address: 0x38
+Device found at address: 0x39
+Device found at address: 0x3A
+Device found at address: 0x3B
+Device found at address: 0x3C
+Device found at address: 0x3D
+Device found at address: 0x3E
+Device found at address: 0x3F
+Device found at address: 0x40
+Device found at address: 0x41
+Device found at address: 0x42
+Device found at address: 0x43
+Device found at address: 0x44
+Device found at address: 0x45
+Device found at address: 0x46
+Device found at address: 0x47
+Device found at address: 0x48
+Device found at address: 0x49
+Device found at address: 0x4A
+Device found at address: 0x4B
+Device found at address: 0x4C
+Device found at address: 0x4D
+Device found at address: 0x4E
+Device found at address: 0x4F
+Device found at address: 0x50
+Device found at address: 0x51
+Device found at address: 0x52
+Device found at address: 0x53
+Device found at address: 0x54
+Device found at address: 0x55
+Device found at address: 0x56
+Device found at address: 0x57
+Device found at address: 0x58
+Device found at address: 0x59
+Device found at address: 0x5A
+Device found at address: 0x5B
+Device found at address: 0x5C
+Device found at address: 0x5D
+Device found at address: 0x5E
+Device found at address: 0x5F
+Device found at address: 0x60
+Device found at address: 0x61
+Device found at address: 0x62
+Device found at address: 0x63
+Device found at address: 0x64
+Device found at address: 0x65
+Device found at address: 0x66
+Device found at address: 0x67
+Device found at address: 0x68
+Device found at address: 0x69
+Device found at address: 0x6A
+Device found at address: 0x6B
+Device found at address: 0x6C
+Device found at address: 0x6D
+Device found at address: 0x6E
+Device found at address: 0x6F
+Device found at address: 0x70
+Device found at address: 0x71
+Device found at address: 0x72
+Device found at address: 0x73
+Device found at address: 0x74
+Device found at address: 0x75
+Device found at address: 0x76
+Device found at address: 0x77
+Device found at address: 0x78
+Device found at address: 0x79
+Device found at address: 0x7A
+Device found at address: 0x7B
+Device found at address: 0x7C
+Device found at address: 0x7D
+Device found at address: 0x7E
+[0;32mI (2689) MPU6050: Accel: X=1328, Y=-172, Z=17740[0m
+[0;32mI (2689) MPU6050: Gyro: X=-256, Y=97, Z=220[0m
+[0;32mI (3689) MPU6050: Accel: X=1316, Y=-208, Z=17728[0m
+[0;32mI (3689) MPU6050: Gyro: X=-258, Y=121, Z=260[0m
+[0;32mI (4689) MPU6050: Accel: X=1328, Y=-172, Z=17652[0m
+[0;32mI (4689) MPU6050: Gyro: X=-225, Y=101, Z=219[0m
+[0;32mI (5689) MPU6050: Accel: X=1292, Y=-164, Z=17664[0m
+[0;32mI (5689) MPU6050: Gyro: X=-252, Y=83, Z=229[0m
+[0;32mI (6689) MPU6050: Accel: X=1332, Y=-256, Z=17824[0m
+[0;32mI (6689) MPU6050: Gyro: X=-252, Y=89, Z=231[0m
+[0;32mI (7689) MPU6050: Accel: X=1308, Y=-188, Z=17748[0m
+[0;32mI (7689) MPU6050: Gyro: X=-221, Y=92, Z=229[0m
+[0;32mI (8689) MPU6050: Accel: X=1240, Y=-192, Z=17740[0m
+[0;32mI (8689) MPU6050: Gyro: X=-237, Y=100, Z=241[0m
+[0;32mI (9689) MPU6050: Accel: X=1304, Y=-148, Z=17656[0m
+[0;32mI (9689) MPU6050: Gyro: X=-200, Y=83, Z=244[0m
+[0;32mI (10689) MPU6050: Accel: X=1272, Y=-180, Z=17772[0m
+[0;32mI (10689) MPU6050: Gyro: X=-237, Y=90, Z=284[0m
+[0;32mI (11689) MPU6050: Accel: X=1368, Y=-196, Z=17696[0m
+[0;32mI (11689) MPU6050: Gyro: X=-261, Y=93, Z=253[0m
+[0;32mI (12689) MPU6050: Accel: X=1372, Y=-196, Z=17584[0m
+[0;32mI (12689) MPU6050: Gyro: X=-239, Y=97, Z=253[0m
+[0;32mI (13689) MPU6050: Accel: X=1340, Y=-216, Z=17724[0m
+[0;32mI (13689) MPU6050: Gyro: X=-230, Y=98, Z=322[0m
+[0;32mI (14689) MPU6050: Accel: X=1228, Y=-192, Z=17708[0m
+[0;32mI (14689) MPU6050: Gyro: X=-254, Y=103, Z=250[0m
+[0;32mI (15689) MPU6050: Accel: X=1372, Y=-276, Z=17648[0m
+[0;32mI (15689) MPU6050: Gyro: X=-238, Y=109, Z=276[0m
+[0;32mI (16689) MPU6050: Accel: X=532, Y=-488, Z=17732[0m
+[0;32mI (16689) MPU6050: Gyro: X=-231, Y=59, Z=402[0m
+[0;32mI (17689) MPU6050: Accel: X=1260, Y=-72, Z=17660[0m
+[0;32mI (17689) MPU6050: Gyro: X=-497, Y=137, Z=35[0m
+[0;32mI (18689) MPU6050: Accel: X=1400, Y=-132, Z=17680[0m
+[0;32mI (18689) MPU6050: Gyro: X=-219, Y=-49, Z=404[0m
+[0;32mI (19689) MPU6050: Accel: X=1344, Y=-144, Z=17660[0m
+[0;32mI (19689) MPU6050: Gyro: X=-284, Y=618, Z=215[0m
+[0;32mI (20689) MPU6050: Accel: X=1424, Y=-232, Z=17552[0m
+[0;32mI (20689) MPU6050: Gyro: X=-185, Y=-50, Z=235[0m
+[0;32mI (21689) MPU6050: Accel: X=1396, Y=-120, Z=17816[0m
+[0;32mI (21689) MPU6050: Gyro: X=-194, Y=84, Z=261[0m
+[0;32mI (22689) MPU6050: Accel: X=1096, Y=-224, Z=17996[0m
+[0;32mI (22689) MPU6050: Gyro: X=-270, Y=175, Z=257[0m
+[0;32mI (23689) MPU6050: Accel: X=1528, Y=700, Z=20584[0m
+[0;32mI (23689) MPU6050: Gyro: X=-686, Y=-2190, Z=470[0m
+[0;32mI (24689) MPU6050: Accel: X=1376, Y=-160, Z=17624[0m
+[0;32mI (24689) MPU6050: Gyro: X=-240, Y=102, Z=195[0m
+[0;32mI (25689) MPU6050: Accel: X=1316, Y=-236, Z=17732[0m
+[0;32mI (25689) MPU6050: Gyro: X=-244, Y=91, Z=263[0m
+[0;32mI (26689) MPU6050: Accel: X=1516, Y=-20, Z=17636[0m
+[0;32mI (26689) MPU6050: Gyro: X=-226, Y=689, Z=-598[0m
+Bouton pressé : reboot dans 1 seconde...
+ESP-ROM:esp32c6-20220919
+Build:Sep 19 2022
+rst:0xc (SW_CPU),boot:0x6f (SPI_FAST_FLASH_BOOT)
+Saved PC:0x4001975a
+SPIWP:0xee
+mode:DIO, clock div:2
+load:0x40875730,len:0x1744
+load:0x4086b910,len:0xe78
+load:0x4086e610,len:0x31c8
+entry 0x4086b91a
+[0;32mI (22) boot: ESP-IDF v5.5.1-dirty 2nd stage bootloader[0m
+[0;32mI (22) boot: compile time Oct 15 2025 18:17:57[0m
+[0;32mI (24) boot: chip revision: v0.2[0m
+[0;32mI (24) boot: efuse block revision: v0.3[0m
+[0;32mI (26) boot.esp32c6: SPI Speed      : 80MHz[0m
+[0;32mI (30) boot.esp32c6: SPI Mode       : DIO[0m
+[0;32mI (34) boot.esp32c6: SPI Flash Size : 2MB[0m
+[0;32mI (37) boot: Enabling RNG early entropy source...[0m
+[0;32mI (42) boot: Partition Table:[0m
+[0;32mI (44) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (51) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (57) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (64) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (70) boot: End of partition table[0m
+[0;32mI (74) esp_image: segment 0: paddr=00010020 vaddr=42018020 size=07aach ( 31404) map[0m
+[0;32mI (93) esp_image: segment 1: paddr=00017ad4 vaddr=40800000 size=00544h (  1348) load[0m
+[0;32mI (95) esp_image: segment 2: paddr=00018020 vaddr=42000020 size=114a4h ( 70820) map[0m
+[0;32mI (123) esp_image: segment 3: paddr=000294cc vaddr=40800544 size=0a9d0h ( 43472) load[0m
+[0;32mI (143) esp_image: segment 4: paddr=00033ea4 vaddr=4080af20 size=015d4h (  5588) load[0m
+[0;32mI (152) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (152) boot: Disabling RNG early entropy source...[0m
+[0;32mI (162) cpu_start: Unicore app[0m
+[0;32mI (171) cpu_start: Pro cpu start user code[0m
+[0;32mI (171) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (172) app_init: Application information:[0m
+[0;32mI (172) app_init: Project name:     Espressif[0m
+[0;32mI (175) app_init: App version:      12c14e0-dirty[0m
+[0;32mI (180) app_init: Compile time:     Oct 15 2025 18:17:32[0m
+[0;32mI (185) app_init: ELF file SHA256:  4d32b4cd7...[0m
+[0;32mI (189) app_init: ESP-IDF:          v5.5.1-dirty[0m
+[0;32mI (193) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (197) efuse_init: Max chip rev:     v0.99 [0m
+[0;32mI (201) efuse_init: Chip rev:         v0.2[0m
+[0;32mI (205) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (211) heap_init: At 4080D3F0 len 0006F220 (444 KiB): RAM[0m
+[0;32mI (216) heap_init: At 4087C610 len 00002F54 (11 KiB): RAM[0m
+[0;32mI (222) heap_init: At 50000000 len 00003FE8 (15 KiB): RTCRAM[0m
+[0;32mI (228) spi_flash: detected chip: generic[0m
+[0;32mI (231) spi_flash: flash io: dio[0m
+[0;33mW (234) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (246) sleep_gpio: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (252) sleep_gpio: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (259) main_task: Started on CPU0[0m
+[0;32mI (259) main_task: Calling app_main()[0m
+
+Scanning I2C bus...
+Device found at address: 0x01
+Device found at address: 0x02
+Device found at address: 0x03
+Device found at address: 0x04
+Device found at address: 0x05
+Device found at address: 0x06
+Device found at address: 0x07
+Device found at address: 0x08
+Device found at address: 0x09
+Device found at address: 0x0A
+Device found at address: 0x0B
+Device found at address: 0x0C
+Device found at address: 0x0D
+Device found at address: 0x0E
+Device found at address: 0x0F
+Device found at address: 0x10
+Device found at address: 0x11
+Device found at address: 0x12
+Device found at address: 0x13
+Device found at address: 0x14
+Device found at address: 0x15
+Device found at address: 0x16
+Device found at address: 0x17
+Device found at address: 0x18
+Device found at address: 0x19
+Device found at address: 0x1A
+Device found at address: 0x1B
+Device found at address: 0x1C
+Device found at address: 0x1D
+Device found at address: 0x1E
+Device found at address: 0x1F
+Device found at address: 0x20
+Device found at address: 0x21
+Device found at address: 0x22
+Device found at address: 0x23
+Device found at address: 0x24
+Device found at address: 0x25
+Device found at address: 0x26
+Device found at address: 0x27
+Device found at address: 0x28
+Device found at address: 0x29
+Device found at address: 0x2A
+Device found at address: 0x2B
+Device found at address: 0x2C
+Device found at address: 0x2D
+Device found at address: 0x2E
+Device found at address: 0x2F
+Device found at address: 0x30
+Device found at address: 0x31
+Device found at address: 0x32
+Device found at address: 0x33
+Device found at address: 0x34
+Device found at address: 0x35
+Device found at address: 0x36
+Device found at address: 0x37
+Device found at address: 0x38
+Device found at address: 0x39
+Device found at address: 0x3A
+Device found at address: 0x3B
+Device found at address: 0x3C
+Device found at address: 0x3D
+Device found at address: 0x3E
+Device found at address: 0x3F
+Device found at address: 0x40
+Device found at address: 0x41
+Device found at address: 0x42
+Device found at address: 0x43
+Device found at address: 0x44
+Device found at address: 0x45
+Device found at address: 0x46
+Device found at address: 0x47
+Device found at address: 0x48
+Device found at address: 0x49
+Device found at address: 0x4A
+Device found at address: 0x4B
+Device found at address: 0x4C
+Device found at address: 0x4D
+Device found at address: 0x4E
+Device found at address: 0x4F
+Device found at address: 0x50
+Device found at address: 0x51
+Device found at address: 0x52
+Device found at address: 0x53
+Device found at address: 0x54
+Device found at address: 0x55
+Device found at address: 0x56
+Device found at address: 0x57
+Device found at address: 0x58
+Device found at address: 0x59
+Device found at address: 0x5A
+Device found at address: 0x5B
+Device found at address: 0x5C
+Device found at address: 0x5D
+Device found at address: 0x5E
+Device found at address: 0x5F
+Device found at address: 0x60
+Device found at address: 0x61
+Device found at address: 0x62
+Device found at address: 0x63
+Device found at address: 0x64
+Device found at address: 0x65
+Device found at address: 0x66
+Device found at address: 0x67
+Device found at address: 0x68
+Device found at address: 0x69
+Device found at address: 0x6A
+Device found at address: 0x6B
+Device found at address: 0x6C
+Device found at address: 0x6D
+Device found at address: 0x6E
+Device found at address: 0x6F
+Device found at address: 0x70
+Device found at address: 0x71
+Device found at address: 0x72
+Device found at address: 0x73
+Device found at address: 0x74
+Device found at address: 0x75
+Device found at address: 0x76
+Device found at address: 0x77
+Device found at address: 0x78
+Device found at address: 0x79
+Device found at address: 0x7A
+Device found at address: 0x7B
+Device found at address: 0x7C
+Device found at address: 0x7D
+Device found at address: 0x7E
+[0;32mI (2689) MPU6050: Accel: X=1388, Y=-116, Z=19528[0m
+[0;32mI (2689) MPU6050: Gyro: X=-45, Y=278, Z=-214[0m
+[0;32mI (3689) MPU6050: Accel: X=1672, Y=-280, Z=17164[0m
+[0;32mI (3689) MPU6050: Gyro: X=-358, Y=-481, Z=203[0m
+[0;32mI (4689) MPU6050: Accel: X=1524, Y=-200, Z=17500[0m
+[0;32mI (4689) MPU6050: Gyro: X=-238, Y=165, Z=254[0m
+[0;32mI (5689) MPU6050: Accel: X=1632, Y=-144, Z=17848[0m
+[0;32mI (5689) MPU6050: Gyro: X=-294, Y=13, Z=-183[0m
+[0;32mI (6689) MPU6050: Accel: X=1396, Y=-292, Z=17784[0m
+[0;32mI (6689) MPU6050: Gyro: X=-227, Y=174, Z=228[0m
+[0;32mI (7689) MPU6050: Accel: X=1412, Y=-236, Z=17764[0m
+[0;32mI (7689) MPU6050: Gyro: X=-268, Y=108, Z=204[0m
+[0;32mI (8689) MPU6050: Accel: X=1452, Y=-216, Z=17656[0m
+[0;32mI (8689) MPU6050: Gyro: X=-233, Y=93, Z=227[0m
+[0;32mI (9689) MPU6050: Accel: X=1448, Y=-192, Z=17648[0m
+[0;32mI (9689) MPU6050: Gyro: X=-225, Y=105, Z=239[0m
+[0;32mI (10689) MPU6050: Accel: X=1460, Y=-216, Z=17692[0m
+[0;32mI (10689) MPU6050: Gyro: X=-265, Y=105, Z=251[0m
+[0;32mI (11689) MPU6050: Accel: X=1432, Y=-204, Z=17684[0m
+[0;32mI (11689) MPU6050: Gyro: X=-262, Y=110, Z=243[0m
+[0;32mI (12689) MPU6050: Accel: X=1460, Y=-272, Z=17656[0m
+[0;32mI (12689) MPU6050: Gyro: X=-262, Y=104, Z=254[0m
+[0;32mI (13689) MPU6050: Accel: X=1444, Y=-168, Z=17668[0m
+[0;32mI (13689) MPU6050: Gyro: X=-234, Y=91, Z=203[0m
+[0;32mI (14689) MPU6050: Accel: X=1440, Y=-288, Z=17460[0m
+[0;32mI (14689) MPU6050: Gyro: X=-221, Y=130, Z=247[0m
+[0;32mI (15689) MPU6050: Accel: X=1360, Y=-232, Z=17660[0m
+[0;32mI (15689) MPU6050: Gyro: X=-227, Y=86, Z=256[0m
+[0;32mI (16689) MPU6050: Accel: X=1452, Y=-236, Z=17524[0m
+[0;32mI (16689) MPU6050: Gyro: X=-203, Y=106, Z=219[0m
+[0;32mI (17689) MPU6050: Accel: X=1468, Y=-228, Z=17656[0m
+[0;32mI (17689) MPU6050: Gyro: X=-237, Y=144, Z=208[0m
+[0;32mI (18689) MPU6050: Accel: X=1456, Y=-128, Z=17620[0m
+[0;32mI (18689) MPU6050: Gyro: X=-227, Y=112, Z=271[0m
+[0;32mI (19689) MPU6050: Accel: X=1456, Y=-224, Z=17696[0m
+[0;32mI (19689) MPU6050: Gyro: X=-229, Y=103, Z=193[0m
+[0;32mI (20689) MPU6050: Accel: X=1464, Y=-304, Z=17780[0m
+[0;32mI (20689) MPU6050: Gyro: X=-216, Y=104, Z=254[0m
+[0;32mI (21689) MPU6050: Accel: X=1456, Y=-308, Z=17704[0m
+[0;32mI (21689) MPU6050: Gyro: X=-229, Y=105, Z=247[0m
+[0;32mI (22689) MPU6050: Accel: X=1424, Y=-196, Z=17772[0m
+[0;32mI (22689) MPU6050: Gyro: X=-245, Y=97, Z=214[0m
+[0;32mI (23689) MPU6050: Accel: X=1472, Y=-200, Z=17740[0m
+[0;32mI (23689) MPU6050: Gyro: X=-255, Y=134, Z=236[0m
+[0;32mI (24689) MPU6050: Accel: X=1468, Y=-264, Z=17760[0m
+[0;32mI (24689) MPU6050: Gyro: X=-240, Y=83, Z=270[0m
+[0;32mI (25689) MPU6050: Accel: X=1428, Y=-232, Z=17756[0m
+[0;32mI (25689) MPU6050: Gyro: X=-210, Y=164, Z=265[0m
+[0;32mI (26689) MPU6050: Accel: X=1392, Y=-268, Z=17712[0m
+[0;32mI (26689) MPU6050: Gyro: X=-219, Y=103, Z=251[0m
+[0;32mI (27689) MPU6050: Accel: X=1512, Y=-228, Z=17560[0m
+[0;32mI (27689) MPU6050: Gyro: X=-227, Y=92, Z=265[0m
+[0;32mI (28689) MPU6050: Accel: X=1504, Y=-184, Z=17716[0m
+[0;32mI (28689) MPU6050: Gyro: X=-277, Y=106, Z=252[0m
+[0;32mI (29689) MPU6050: Accel: X=1520, Y=-236, Z=17704[0m
+[0;32mI (29689) MPU6050: Gyro: X=-264, Y=60, Z=246[0m
+[0;32mI (30689) MPU6050: Accel: X=1472, Y=-284, Z=17720[0m
+[0;32mI (30689) MPU6050: Gyro: X=-268, Y=123, Z=267[0m
+[0;32mI (31689) MPU6050: Accel: X=1464, Y=-252, Z=17608[0m
+[0;32mI (31689) MPU6050: Gyro: X=-247, Y=76, Z=267[0m
+[0;32mI (32689) MPU6050: Accel: X=1484, Y=-240, Z=17568[0m
+[0;32mI (32689) MPU6050: Gyro: X=-237, Y=110, Z=243[0m
+[0;32mI (33689) MPU6050: Accel: X=1488, Y=-264, Z=17664[0m
+[0;32mI (33689) MPU6050: Gyro: X=-227, Y=115, Z=231[0m
+[0;32mI (34689) MPU6050: Accel: X=1460, Y=-280, Z=17716[0m
+[0;32mI (34689) MPU6050: Gyro: X=-266, Y=105, Z=206[0m
+[0;32mI (35689) MPU6050: Accel: X=1520, Y=-200, Z=17764[0m
+[0;32mI (35689) MPU6050: Gyro: X=-204, Y=88, Z=218[0m
+[0;32mI (36689) MPU6050: Accel: X=1436, Y=-220, Z=17796[0m
+[0;32mI (36689) MPU6050: Gyro: X=-249, Y=83, Z=239[0m
+[0;32mI (37689) MPU6050: Accel: X=1456, Y=-208, Z=17676[0m
+[0;32mI (37689) MPU6050: Gyro: X=-256, Y=113, Z=232[0m
+[0;32mI (38689) MPU6050: Accel: X=1456, Y=-260, Z=17716[0m
+[0;32mI (38689) MPU6050: Gyro: X=-251, Y=124, Z=248[0m
+[0;32mI (39689) MPU6050: Accel: X=1424, Y=-268, Z=17772[0m
+[0;32mI (39689) MPU6050: Gyro: X=-226, Y=95, Z=223[0m
+[0;32mI (40689) MPU6050: Accel: X=1460, Y=-212, Z=17800[0m
+[0;32mI (40689) MPU6050: Gyro: X=-273, Y=104, Z=231[0m
+[0;32mI (41689) MPU6050: Accel: X=1420, Y=-292, Z=17664[0m
+[0;32mI (41689) MPU6050: Gyro: X=-219, Y=146, Z=219[0m
+[0;32mI (42689) MPU6050: Accel: X=1468, Y=-184, Z=17652[0m
+[0;32mI (42689) MPU6050: Gyro: X=-237, Y=106, Z=220[0m
+[0;32mI (43689) MPU6050: Accel: X=1300, Y=76, Z=18680[0m
+[0;32mI (43689) MPU6050: Gyro: X=-404, Y=166, Z=222[0m
+[0;32mI (44689) MPU6050: Accel: X=1476, Y=-380, Z=17796[0m
+[0;32mI (44689) MPU6050: Gyro: X=-195, Y=71, Z=249[0m
+[0;32mI (45689) MPU6050: Accel: X=1448, Y=-212, Z=17740[0m
+[0;32mI (45689) MPU6050: Gyro: X=-228, Y=118, Z=227[0m
+[0;32mI (46689) MPU6050: Accel: X=1480, Y=-272, Z=17628[0m
+[0;32mI (46689) MPU6050: Gyro: X=-238, Y=111, Z=235[0m
+[0;32mI (47689) MPU6050: Accel: X=1516, Y=-184, Z=17712[0m
+[0;32mI (47689) MPU6050: Gyro: X=-231, Y=112, Z=243[0m
+[0;32mI (48689) MPU6050: Accel: X=1444, Y=-292, Z=17708[0m
+[0;32mI (48689) MPU6050: Gyro: X=-233, Y=102, Z=244[0m
+[0;32mI (49689) MPU6050: Accel: X=1456, Y=-240, Z=17768[0m
+[0;32mI (49689) MPU6050: Gyro: X=-253, Y=56, Z=271[0m
+[0;32mI (50689) MPU6050: Accel: X=1532, Y=-184, Z=17692[0m
+[0;32mI (50689) MPU6050: Gyro: X=-250, Y=100, Z=213[0m
+[0;32mI (51689) MPU6050: Accel: X=1536, Y=-216, Z=17764[0m
+[0;32mI (51689) MPU6050: Gyro: X=-242, Y=101, Z=265[0m
+[0;32mI (52689) MPU6050: Accel: X=1476, Y=-220, Z=17696[0m
+[0;32mI (52689) MPU6050: Gyro: X=-258, Y=144, Z=240[0m
+[0;32mI (53689) MPU6050: Accel: X=1464, Y=-256, Z=17676[0m
+[0;32mI (53689) MPU6050: Gyro: X=-229, Y=105, Z=259[0m
+[0;32mI (54689) MPU6050: Accel: X=1512, Y=-180, Z=17620[0m
+[0;32mI (54689) MPU6050: Gyro: X=-255, Y=127, Z=196[0m
+[0;32mI (55689) MPU6050: Accel: X=1468, Y=-148, Z=17852[0m
+[0;32mI (55689) MPU6050: Gyro: X=-245, Y=99, Z=248[0m
+[0;32mI (56689) MPU6050: Accel: X=1432, Y=-280, Z=17724[0m
+[0;32mI (56689) MPU6050: Gyro: X=-230, Y=115, Z=227[0m
+[0;32mI (57689) MPU6050: Accel: X=1516, Y=-232, Z=17688[0m
+[0;32mI (57689) MPU6050: Gyro: X=-216, Y=131, Z=222[0m
+[0;32mI (58689) MPU6050: Accel: X=1472, Y=-184, Z=17656[0m
+[0;32mI (58689) MPU6050: Gyro: X=-258, Y=117, Z=228[0m
+[0;32mI (59689) MPU6050: Accel: X=1448, Y=-192, Z=17664[0m
+[0;32mI (59689) MPU6050: Gyro: X=-238, Y=122, Z=250[0m
+[0;32mI (60689) MPU6050: Accel: X=1412, Y=-240, Z=17712[0m
+[0;32mI (60689) MPU6050: Gyro: X=-243, Y=142, Z=240[0m
+[0;32mI (61689) MPU6050: Accel: X=1516, Y=-284, Z=17728[0m
+[0;32mI (61689) MPU6050: Gyro: X=-250, Y=99, Z=230[0m
+[0;32mI (62689) MPU6050: Accel: X=1408, Y=-300, Z=17820[0m
+[0;32mI (62689) MPU6050: Gyro: X=-209, Y=130, Z=220[0m
+[0;32mI (63689) MPU6050: Accel: X=1452, Y=-240, Z=17772[0m
+[0;32mI (63689) MPU6050: Gyro: X=-228, Y=93, Z=232[0m
+[0;32mI (64689) MPU6050: Accel: X=1492, Y=-240, Z=17660[0m
+[0;32mI (64689) MPU6050: Gyro: X=-266, Y=105, Z=234[0m
+[0;32mI (65689) MPU6050: Accel: X=1508, Y=-236, Z=17656[0m
+[0;32mI (65689) MPU6050: Gyro: X=-232, Y=82, Z=259[0m
+[0;32mI (66689) MPU6050: Accel: X=1432, Y=-204, Z=17736[0m
+[0;32mI (66689) MPU6050: Gyro: X=-261, Y=107, Z=241[0m
+[0;32mI (67689) MPU6050: Accel: X=1488, Y=-244, Z=17656[0m
+[0;32mI (67689) MPU6050: Gyro: X=-259, Y=96, Z=218[0m
+[0;32mI (6

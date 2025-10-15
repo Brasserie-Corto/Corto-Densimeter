@@ -33,7 +33,7 @@ sudo udevadm trigger
 ### **3. Add ESP-IDF to Your Environment**
 Ensure the `idf.py` command is available in your terminal. If not, activate the ESP-IDF environment:
 ```bash
-. \$HOME/esp/v5.5.1/esp-idf/export.sh
+. ~/esp/v5.5.1/esp-idf/export.sh
 ```
 To avoid running this command every time you open a terminal, you can add it to your `.bashrc`
 
