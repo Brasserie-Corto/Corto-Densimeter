@@ -79,7 +79,7 @@ esp_err_t mpu6050_wake_and_configure(i2c_master_dev_handle_t dev_handle, i2c_mas
 /**
  * @brief Lit les données brutes du MPU6050 (accélération et gyroscope).
  */
-esp_err_t mpu6050_read_data(i2c_master_dev_handle_t dev_handle, i2c_master_bus_handle_t bus_handle, mpu6050_data_t *data) {
+esp_err_t mpu6050_read_data(i2c_master_dev_handle_t dev_handle, i2c_master_bus_handle_t bus_handle, mpu6050_raw_t *data) {
     uint8_t reg_addr = 0x3B;
     uint8_t buffer[14];
     esp_err_t ret = i2c_master_transmit_receive(dev_handle, &reg_addr, 1, buffer, 14, pdMS_TO_TICKS(1000));      // Lire 14 octets à partir du registre 0x3B
@@ -125,5 +125,16 @@ esp_err_t mpu6050_read_data(i2c_master_dev_handle_t dev_handle, i2c_master_bus_h
     data->gx = (buffer[8] << 8) | buffer[9];                                // Vitesse angulaire X
     data->gy = (buffer[10] << 8) | buffer[11];                              // Vitesse angulaire Y
     data->gz = (buffer[12] << 8) | buffer[13];                              // Vitesse angulaire Z
+    return ESP_OK;
+}
+
+esp_err_t convert_mpu6050_data(const mpu6050_raw_t *raw, mpu6050_converted_t *converted) {
+    if (!raw || !converted) return ESP_ERR_INVALID_ARG;
+    converted->ax = raw->ax / 16384.0f; 
+    converted->ay = raw->ay / 16384.0f;
+    converted->az = raw->az / 16384.0f;
+    converted->gx = raw->gx / 131.0f;
+    converted->gy = raw->gy / 131.0f;
+    converted->gz = raw->gz / 131.0f;
     return ESP_OK;
 }

@@ -34,8 +34,10 @@ void app_main() {
     // Initialisation des handles : ressources abstraites pour I2C et MPU6050
     i2c_master_bus_handle_t i2c_bus = NULL; 
     i2c_master_dev_handle_t dev_handle = NULL;
-    mpu6050_data_t mpu_data;
 
+    mpu6050_raw_t raw_data;
+    mpu6050_converted_t converted_data; 
+    
     // Initialisation des LEDs
     esp_err_t ret = leds_init(LED_GREEN_GPIO, LED_RED_GPIO);
     if (ret != ESP_OK) {
@@ -70,22 +72,22 @@ void app_main() {
 
     // Boucle principale
     while (1) {
-        // Allumer la LED verte pendant la lecture
         gpio_set_level(LED_GREEN_GPIO, 1);
-
-        // Lire les données du MPU6050
-        ret = mpu6050_read_data(dev_handle, i2c_bus, &mpu_data);                                
+        ret = mpu6050_read_data(dev_handle, i2c_bus, &raw_data);
         if (ret == ESP_OK) {
-            ESP_LOGI(TAG, "Accel: X=%d, Y=%d, Z=%d", mpu_data.ax, mpu_data.ay, mpu_data.az);
-            ESP_LOGI(TAG, "Gyro: X=%d, Y=%d, Z=%d", mpu_data.gx, mpu_data.gy, mpu_data.gz);
+            ESP_LOGI(TAG, "Raw Accel: X=%d, Y=%d, Z=%d", raw_data.ax, raw_data.ay, raw_data.az);
+            ESP_LOGI(TAG, "Raw Gyro: X=%d, Y=%d, Z=%d", raw_data.gx, raw_data.gy, raw_data.gz);
+            ret = convert_mpu6050_data(&raw_data, &converted_data);
+            if (ret == ESP_OK) {
+                ESP_LOGI(TAG, "Accel (g): X=%.2f, Y=%.2f, Z=%.2f", converted_data.ax, converted_data.ay, converted_data.az);
+                ESP_LOGI(TAG, "Gyro (°/s): X=%.2f, Y=%.2f, Z=%.2f", converted_data.gx, converted_data.gy, converted_data.gz);
+            } else {
+                ESP_LOGE(TAG, "Erreur de conversion: %s", esp_err_to_name(ret));
+            }
         } else {
-            handle_error(ret, "Erreur de lecture des données du MPU6050");
+            handle_error(ret, "Erreur de lecture du MPU6050");
         }
-
-        // Éteindre la LED verte après la lecture
-        gpio_set_level(LED_GREEN_GPIO, 0);                                                          
-
-        // Attendre 1 seconde avant la prochaine lecture
+        gpio_set_level(LED_GREEN_GPIO, 0);
         vTaskDelay(1000 / portTICK_PERIOD_MS);
     }
 }

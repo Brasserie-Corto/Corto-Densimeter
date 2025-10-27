@@ -1,7 +1,7 @@
 {
     "version":            "1.2",
     "project_name":       "Espressif",
-    "project_version":    "727c46a-dirty",
+    "project_version":    "f45fffb-dirty",
     "project_path":       "/home/t70n/Documents/Corto-Densimeter/Espressif",
     "idf_path":           "/home/t70n/esp/v5.5.1/esp-idf",
     "build_dir":          "/home/t70n/Documents/Corto-Densimeter/Espressif/build",

@@ -111,4 +111,14 @@ View the serial output of the board :
 idf.py -p /dev/ttyACM0 monitor
 ```
 
+### **All In One**
+
+```bash
+cd Espressif
+. ~/esp/v5.5.1/esp-idf/export.sh
+idf.py set-target esp32c6   
+idf.py build
+idf.py -p /dev/ttyACM0 flash
+idf.py -p /dev/ttyACM0 monitor
+```
 
