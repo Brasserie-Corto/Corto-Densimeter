@@ -1,4 +1,4 @@
-# Install script for directory: /home/t70n/esp/v5.5.1/esp-idf
+# Install script for directory: /home/t70n/esp/esp-idf
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -32,9 +32,9 @@ if(NOT DEFINED CMAKE_CROSSCOMPILING)
   set(CMAKE_CROSSCOMPILING "TRUE")
 endif()
 
-# Set path to fallback-tool for dependency-resolution.
+# Set default install directory permissions.
 if(NOT DEFINED CMAKE_OBJDUMP)
-  set(CMAKE_OBJDUMP "/home/t70n/.espressif/tools/riscv32-esp-elf/esp-14.2.0_20241119/riscv32-esp-elf/bin/riscv32-esp-elf-objdump")
+  set(CMAKE_OBJDUMP "/home/t70n/.espressif/tools/riscv32-esp-elf/esp-15.2.0_20251204/riscv32-esp-elf/bin/riscv32-esp-elf-objdump")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
@@ -44,7 +44,27 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("/home/t70n/Documents/Corto-Densimeter/Espressif/build/esp-idf/mbedtls/cmake_install.cmake")
+  include("/home/t70n/Documents/Corto-Densimeter/Espressif/build/esp-idf/esp_stdio/cmake_install.cmake")
+endif()
+
+if(NOT CMAKE_INSTALL_LOCAL_ONLY)
+  # Include the install script for the subdirectory.
+  include("/home/t70n/Documents/Corto-Densimeter/Espressif/build/esp-idf/esp_hal_gpio/cmake_install.cmake")
+endif()
+
+if(NOT CMAKE_INSTALL_LOCAL_ONLY)
+  # Include the install script for the subdirectory.
+  include("/home/t70n/Documents/Corto-Densimeter/Espressif/build/esp-idf/esp_hal_gpspi/cmake_install.cmake")
+endif()
+
+if(NOT CMAKE_INSTALL_LOCAL_ONLY)
+  # Include the install script for the subdirectory.
+  include("/home/t70n/Documents/Corto-Densimeter/Espressif/build/esp-idf/esp_hal_mspi/cmake_install.cmake")
+endif()
+
+if(NOT CMAKE_INSTALL_LOCAL_ONLY)
+  # Include the install script for the subdirectory.
+  include("/home/t70n/Documents/Corto-Densimeter/Espressif/build/esp-idf/esp_blockdev/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
@@ -89,6 +109,56 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
+  include("/home/t70n/Documents/Corto-Densimeter/Espressif/build/esp-idf/esp_hal_timg/cmake_install.cmake")
+endif()
+
+if(NOT CMAKE_INSTALL_LOCAL_ONLY)
+  # Include the install script for the subdirectory.
+  include("/home/t70n/Documents/Corto-Densimeter/Espressif/build/esp-idf/esp_timer/cmake_install.cmake")
+endif()
+
+if(NOT CMAKE_INSTALL_LOCAL_ONLY)
+  # Include the install script for the subdirectory.
+  include("/home/t70n/Documents/Corto-Densimeter/Espressif/build/esp-idf/esp_security/cmake_install.cmake")
+endif()
+
+if(NOT CMAKE_INSTALL_LOCAL_ONLY)
+  # Include the install script for the subdirectory.
+  include("/home/t70n/Documents/Corto-Densimeter/Espressif/build/esp-idf/esp_driver_gpio/cmake_install.cmake")
+endif()
+
+if(NOT CMAKE_INSTALL_LOCAL_ONLY)
+  # Include the install script for the subdirectory.
+  include("/home/t70n/Documents/Corto-Densimeter/Espressif/build/esp-idf/esp_hal_uart/cmake_install.cmake")
+endif()
+
+if(NOT CMAKE_INSTALL_LOCAL_ONLY)
+  # Include the install script for the subdirectory.
+  include("/home/t70n/Documents/Corto-Densimeter/Espressif/build/esp-idf/esp_pm/cmake_install.cmake")
+endif()
+
+if(NOT CMAKE_INSTALL_LOCAL_ONLY)
+  # Include the install script for the subdirectory.
+  include("/home/t70n/Documents/Corto-Densimeter/Espressif/build/esp-idf/mbedtls/cmake_install.cmake")
+endif()
+
+if(NOT CMAKE_INSTALL_LOCAL_ONLY)
+  # Include the install script for the subdirectory.
+  include("/home/t70n/Documents/Corto-Densimeter/Espressif/build/esp-idf/esp_hal_wdt/cmake_install.cmake")
+endif()
+
+if(NOT CMAKE_INSTALL_LOCAL_ONLY)
+  # Include the install script for the subdirectory.
+  include("/home/t70n/Documents/Corto-Densimeter/Espressif/build/esp-idf/esp_hal_ana_conv/cmake_install.cmake")
+endif()
+
+if(NOT CMAKE_INSTALL_LOCAL_ONLY)
+  # Include the install script for the subdirectory.
+  include("/home/t70n/Documents/Corto-Densimeter/Espressif/build/esp-idf/esp_hal_rtc_timer/cmake_install.cmake")
+endif()
+
+if(NOT CMAKE_INSTALL_LOCAL_ONLY)
+  # Include the install script for the subdirectory.
   include("/home/t70n/Documents/Corto-Densimeter/Espressif/build/esp-idf/bootloader_support/cmake_install.cmake")
 endif()
 
@@ -99,17 +169,12 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("/home/t70n/Documents/Corto-Densimeter/Espressif/build/esp-idf/esp_driver_gpio/cmake_install.cmake")
-endif()
-
-if(NOT CMAKE_INSTALL_LOCAL_ONLY)
-  # Include the install script for the subdirectory.
   include("/home/t70n/Documents/Corto-Densimeter/Espressif/build/esp-idf/spi_flash/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("/home/t70n/Documents/Corto-Densimeter/Espressif/build/esp-idf/esp_timer/cmake_install.cmake")
+  include("/home/t70n/Documents/Corto-Densimeter/Espressif/build/esp-idf/esp_usb_cdc_rom_console/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
@@ -129,11 +194,6 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("/home/t70n/Documents/Corto-Densimeter/Espressif/build/esp-idf/hal/cmake_install.cmake")
-endif()
-
-if(NOT CMAKE_INSTALL_LOCAL_ONLY)
-  # Include the install script for the subdirectory.
   include("/home/t70n/Documents/Corto-Densimeter/Espressif/build/esp-idf/log/cmake_install.cmake")
 endif()
 
@@ -144,12 +204,32 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("/home/t70n/Documents/Corto-Densimeter/Espressif/build/esp-idf/soc/cmake_install.cmake")
+  include("/home/t70n/Documents/Corto-Densimeter/Espressif/build/esp-idf/hal/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("/home/t70n/Documents/Corto-Densimeter/Espressif/build/esp-idf/esp_security/cmake_install.cmake")
+  include("/home/t70n/Documents/Corto-Densimeter/Espressif/build/esp-idf/esp_hal_dma/cmake_install.cmake")
+endif()
+
+if(NOT CMAKE_INSTALL_LOCAL_ONLY)
+  # Include the install script for the subdirectory.
+  include("/home/t70n/Documents/Corto-Densimeter/Espressif/build/esp-idf/esp_hal_usb/cmake_install.cmake")
+endif()
+
+if(NOT CMAKE_INSTALL_LOCAL_ONLY)
+  # Include the install script for the subdirectory.
+  include("/home/t70n/Documents/Corto-Densimeter/Espressif/build/esp-idf/esp_hal_pmu/cmake_install.cmake")
+endif()
+
+if(NOT CMAKE_INSTALL_LOCAL_ONLY)
+  # Include the install script for the subdirectory.
+  include("/home/t70n/Documents/Corto-Densimeter/Espressif/build/esp-idf/esp_hal_touch_sens/cmake_install.cmake")
+endif()
+
+if(NOT CMAKE_INSTALL_LOCAL_ONLY)
+  # Include the install script for the subdirectory.
+  include("/home/t70n/Documents/Corto-Densimeter/Espressif/build/esp-idf/esp_hal_i2s/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
@@ -164,7 +244,7 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("/home/t70n/Documents/Corto-Densimeter/Espressif/build/esp-idf/newlib/cmake_install.cmake")
+  include("/home/t70n/Documents/Corto-Densimeter/Espressif/build/esp-idf/esp_libc/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
@@ -179,7 +259,17 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("/home/t70n/Documents/Corto-Densimeter/Espressif/build/esp-idf/esp_pm/cmake_install.cmake")
+  include("/home/t70n/Documents/Corto-Densimeter/Espressif/build/esp-idf/soc/cmake_install.cmake")
+endif()
+
+if(NOT CMAKE_INSTALL_LOCAL_ONLY)
+  # Include the install script for the subdirectory.
+  include("/home/t70n/Documents/Corto-Densimeter/Espressif/build/esp-idf/esp_hal_i2c/cmake_install.cmake")
+endif()
+
+if(NOT CMAKE_INSTALL_LOCAL_ONLY)
+  # Include the install script for the subdirectory.
+  include("/home/t70n/Documents/Corto-Densimeter/Espressif/build/esp-idf/esp_hal_twai/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
@@ -189,112 +279,12 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("/home/t70n/Documents/Corto-Densimeter/Espressif/build/esp-idf/esp_driver_pcnt/cmake_install.cmake")
-endif()
-
-if(NOT CMAKE_INSTALL_LOCAL_ONLY)
-  # Include the install script for the subdirectory.
-  include("/home/t70n/Documents/Corto-Densimeter/Espressif/build/esp-idf/esp_driver_gptimer/cmake_install.cmake")
-endif()
-
-if(NOT CMAKE_INSTALL_LOCAL_ONLY)
-  # Include the install script for the subdirectory.
-  include("/home/t70n/Documents/Corto-Densimeter/Espressif/build/esp-idf/esp_driver_spi/cmake_install.cmake")
-endif()
-
-if(NOT CMAKE_INSTALL_LOCAL_ONLY)
-  # Include the install script for the subdirectory.
-  include("/home/t70n/Documents/Corto-Densimeter/Espressif/build/esp-idf/esp_driver_mcpwm/cmake_install.cmake")
-endif()
-
-if(NOT CMAKE_INSTALL_LOCAL_ONLY)
-  # Include the install script for the subdirectory.
-  include("/home/t70n/Documents/Corto-Densimeter/Espressif/build/esp-idf/esp_driver_ana_cmpr/cmake_install.cmake")
-endif()
-
-if(NOT CMAKE_INSTALL_LOCAL_ONLY)
-  # Include the install script for the subdirectory.
-  include("/home/t70n/Documents/Corto-Densimeter/Espressif/build/esp-idf/esp_driver_i2s/cmake_install.cmake")
-endif()
-
-if(NOT CMAKE_INSTALL_LOCAL_ONLY)
-  # Include the install script for the subdirectory.
-  include("/home/t70n/Documents/Corto-Densimeter/Espressif/build/esp-idf/sdmmc/cmake_install.cmake")
-endif()
-
-if(NOT CMAKE_INSTALL_LOCAL_ONLY)
-  # Include the install script for the subdirectory.
-  include("/home/t70n/Documents/Corto-Densimeter/Espressif/build/esp-idf/esp_driver_sdmmc/cmake_install.cmake")
-endif()
-
-if(NOT CMAKE_INSTALL_LOCAL_ONLY)
-  # Include the install script for the subdirectory.
-  include("/home/t70n/Documents/Corto-Densimeter/Espressif/build/esp-idf/esp_driver_sdspi/cmake_install.cmake")
-endif()
-
-if(NOT CMAKE_INSTALL_LOCAL_ONLY)
-  # Include the install script for the subdirectory.
-  include("/home/t70n/Documents/Corto-Densimeter/Espressif/build/esp-idf/esp_driver_sdio/cmake_install.cmake")
-endif()
-
-if(NOT CMAKE_INSTALL_LOCAL_ONLY)
-  # Include the install script for the subdirectory.
-  include("/home/t70n/Documents/Corto-Densimeter/Espressif/build/esp-idf/esp_driver_dac/cmake_install.cmake")
-endif()
-
-if(NOT CMAKE_INSTALL_LOCAL_ONLY)
-  # Include the install script for the subdirectory.
-  include("/home/t70n/Documents/Corto-Densimeter/Espressif/build/esp-idf/esp_driver_bitscrambler/cmake_install.cmake")
-endif()
-
-if(NOT CMAKE_INSTALL_LOCAL_ONLY)
-  # Include the install script for the subdirectory.
-  include("/home/t70n/Documents/Corto-Densimeter/Espressif/build/esp-idf/esp_driver_rmt/cmake_install.cmake")
-endif()
-
-if(NOT CMAKE_INSTALL_LOCAL_ONLY)
-  # Include the install script for the subdirectory.
-  include("/home/t70n/Documents/Corto-Densimeter/Espressif/build/esp-idf/esp_driver_tsens/cmake_install.cmake")
-endif()
-
-if(NOT CMAKE_INSTALL_LOCAL_ONLY)
-  # Include the install script for the subdirectory.
-  include("/home/t70n/Documents/Corto-Densimeter/Espressif/build/esp-idf/esp_driver_sdm/cmake_install.cmake")
+  include("/home/t70n/Documents/Corto-Densimeter/Espressif/build/esp-idf/driver/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
   include("/home/t70n/Documents/Corto-Densimeter/Espressif/build/esp-idf/esp_driver_i2c/cmake_install.cmake")
-endif()
-
-if(NOT CMAKE_INSTALL_LOCAL_ONLY)
-  # Include the install script for the subdirectory.
-  include("/home/t70n/Documents/Corto-Densimeter/Espressif/build/esp-idf/esp_driver_uart/cmake_install.cmake")
-endif()
-
-if(NOT CMAKE_INSTALL_LOCAL_ONLY)
-  # Include the install script for the subdirectory.
-  include("/home/t70n/Documents/Corto-Densimeter/Espressif/build/esp-idf/esp_driver_ledc/cmake_install.cmake")
-endif()
-
-if(NOT CMAKE_INSTALL_LOCAL_ONLY)
-  # Include the install script for the subdirectory.
-  include("/home/t70n/Documents/Corto-Densimeter/Espressif/build/esp-idf/esp_driver_parlio/cmake_install.cmake")
-endif()
-
-if(NOT CMAKE_INSTALL_LOCAL_ONLY)
-  # Include the install script for the subdirectory.
-  include("/home/t70n/Documents/Corto-Densimeter/Espressif/build/esp-idf/esp_driver_usb_serial_jtag/cmake_install.cmake")
-endif()
-
-if(NOT CMAKE_INSTALL_LOCAL_ONLY)
-  # Include the install script for the subdirectory.
-  include("/home/t70n/Documents/Corto-Densimeter/Espressif/build/esp-idf/esp_driver_twai/cmake_install.cmake")
-endif()
-
-if(NOT CMAKE_INSTALL_LOCAL_ONLY)
-  # Include the install script for the subdirectory.
-  include("/home/t70n/Documents/Corto-Densimeter/Espressif/build/esp-idf/driver/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)

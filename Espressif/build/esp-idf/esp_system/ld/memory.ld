@@ -12,7 +12,7 @@
  */
 /*
  * Automatically generated file. DO NOT EDIT.
- * Espressif IoT Development Framework (ESP-IDF) 5.5.1 Configuration Header
+ * Espressif IoT Development Framework (ESP-IDF) 6.1.0 Configuration Header
  */
        
 /* List of deprecated options */
@@ -22,6 +22,7 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 /* CPU instruction prefetch padding size for flash mmap scenario */
+/* Copy from esp_secure_boot.h */
 /*
  * PMP region granularity size
  * Software may determine the PMP granularity by writing zero to pmp0cfg, then writing all ones
@@ -31,6 +32,16 @@
 /* CPU instruction prefetch padding size for memory protection scenario */
 /* Memory alignment size for PMS */
     /* rtc timer data (s_rtc_timer_retain_mem, see esp_clk.c files). For rtc_timer_data_in_rtc_mem section. */
+/*
+ * FAST_REFLASHING_PADDING
+ *
+ * Aligns the current location (.) to CONFIG_ESPTOOLPY_FAST_REFLASHING_PADDING.
+ * If more than half of the alignment block is already consumed,
+ * extra padding is applied to skip to the next boundary.
+ * For example, if the current location (.) is 0x1900 and the padding is 4 KB,
+ * the location will be moved to 0x3000 instead of 0x2000 because less than
+ * half of the current 4 KB block remains (0x2000 - 0x1900 < 2 KB).
+ */
 /*
  * IDRAM0_2_SEG_SIZE_DEFAULT is used when page size is 64KB
  */
@@ -58,6 +69,40 @@ MEMORY
   /* Flash mapped instruction data */
   drom_seg (R) : org = 0x42000020, len = (0x8000 << 8) - 0x20
   /* (See irom_seg for meaning of 0x20 offset in the above.) */
+/**
+ *  LP RAM (RTC Memory) Layout for ESP32-C6
+ *  Total Size: 16KB (0x4000)
+ *  Address Range: 0x50000000 - 0x50004000
+ *
+ *  The LP RAM persists over deep sleep and is used for:
+ *  - ULP coprocessor code and data (optional)
+ *  - RTC wake stub code and data
+ *  - Data that needs to survive deep sleep
+ *  - Bootloader retain memory (for reboot counter, OTA info, etc.)
+ *
+ *  +-----------------------------+ 0x50004000 (LP RAM end)
+ *  | Secure Boot Image Digest    |
+ *  | for fast wake secure boot.  | ( For ROM using, must keep it at the end 32 bytes of LP RAM)
+ *  |(only if CONFIG_SECURE_BOOT) |
+ *  |- - - - - - - - - - - - - - -|
+ *  | bootloader_data_rtc_mem     |
+ *  | (ESP_BOOTLOADER_RESERVE_RTC)| lp_reserved_seg (RESERVE_RTC_MEM)
+ *  |- - - - - - - - - - - - - - -|
+ *  | rtc_timer_data_in_rtc_mem   |
+ *  | (RTC_TIMER_RESERVE_RTC=24B) |
+ *  +-----------------------------+ 0x50004000 - RESERVE_RTC_MEM
+ *  | .rtc.force_slow             |
+ *  | .rtc_noinit (NOLOAD)        |
+ *  | .rtc.bss (NOLOAD)           |
+ *  | .rtc.data                   | lp_ram_seg (= rtc_iram_seg = rtc_data_seg = rtc_slow_seg)
+ *  | .rtc.force_fast             |
+ *  |- - - - - - - - - - - - - - -|
+ *  | .rtc.text                   | RTC wake stub code
+ *  +-----------------------------+ 0x50000000 + CONFIG_ULP_COPROC_RESERVE_MEM (if ULP enabled)
+ *  | ULP Coprocessor Reserve     | (Optional, CONFIG_ULP_COPROC_RESERVE_MEM)
+ *  | (code + data)               |
+ *  +-----------------------------+ 0x50000000 (LP RAM start)
+ */
   /**
    * lp ram memory (RWX). Persists over deep sleep. // TODO: IDF-5667
    */

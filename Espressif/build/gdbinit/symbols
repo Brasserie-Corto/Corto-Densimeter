@@ -17,4 +17,4 @@ set confirm off
 set confirm on
 
 # Load application symbols
-file /home/t70n/Documents/Corto-Densimeter/Espressif/build/Espressif.elf
+file /home/t70n/Documents/Corto-Densimeter/Espressif/build/CORTO-DENSIMETER.elf

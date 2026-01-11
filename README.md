@@ -2,13 +2,15 @@
 
 DIY densimeter for Corto Brewery use cases.
 
+---
+
 # ===[ Espressif IDF - ESP32-C6 ]===
 
 ---
 
 ## **Prerequisites**
 - **Operating System**: Ubuntu 24 (or any Linux-based system).
-- **ESP-IDF Version**: v5.5.1.
+- **ESP-IDF Version**: v6.1.
 - **Python**: Python 3.6 or later.
 - **Hardware**: ESP32-C6-DevKitC-1 board.
 
@@ -16,109 +18,180 @@ DIY densimeter for Corto Brewery use cases.
 
 ## **Setup Instructions**
 
-### **1. Install ESP-IDF**
-If ESP-IDF is not already installed, follow the [official installation guide](https://docs.espressif.com/projects/esp-idf/en/latest/esp32c6/get-started/index.html). Use the VSCode extension. 
+### **1. Install Dependencies**
+Update your Linux system and install the necessary tools:
 
-### **2. Set Up Permissions**
-To allow your system to communicate with the ESP32-C6 board, you need to set up **udev rules** :
+```bash
+sudo apt update
+sudo apt install git wget flex bison gperf python3 python3-pip python3-venv cmake ninja-build ccache libffi-dev libssl-dev dfu-util libusb-1.0-0
+```
+
+---
+
+### **2. Install ESP-IDF**
+Clone the ESP-IDF repository and install the tools:
+
+```bash
+mkdir -p ~/esp
+cd ~/esp
+git clone --recursive https://github.com/espressif/esp-idf.git
+cd esp-idf
+git checkout v6.1
+./install.sh
+```
+
+---
+
+### **3. Configure Permissions (udev rules)**
+Allow your system to communicate with the ESP32-C6:
+
 ```bash
 sudo cp --update=none ~/.espressif/tools/openocd-esp32/v0.12.0-esp32-20250707/openocd-esp32/share/openocd/contrib/60-openocd.rules /etc/udev/rules.d/
-```
-After copying the rules, reload `udev`:
-```bash
 sudo udevadm control --reload-rules
 sudo udevadm trigger
 ```
 
-### **3. Add ESP-IDF to Your Environment**
-Ensure the `idf.py` command is available in your terminal. If not, activate the ESP-IDF environment:
+---
+
+### **4. Configure ESP-IDF Environment**
+Activate the ESP-IDF environment in your terminal:
+
 ```bash
-. ~/esp/v5.5.1/esp-idf/export.sh
+. ~/esp/esp-idf/export.sh
 ```
-To avoid running this command every time you open a terminal, you can add it to your `.bashrc`
 
----
-## **I2C Module Setup for ESP32-C6**
+To avoid repeating this command every time you open a terminal:
 
-### **Prerequisites**
-To use the I2C bus with the ESP32-C6 and the MPU6050 (GY-521) sensor, ensure the following prerequisites are met:
-- **ESP-IDF Version**: v5.5.1 or later.
-- **Hardware**: ESP32-C6-DevKitC-1 board.
-- **Sensor**: GY-521 (MPU6050) I2C module.
----
-
-### **1. Verify I2C Support in ESP32-C6**
-The ESP32-C6 natively supports the I2C bus. Ensure the following options are present in your `sdkconfig` file:
-
-```ini
-SOC_I2C_SUPPORTED=y
-SOC_I2C_NUM=2
-SOC_HP_I2C_NUM=1
-```
-These options confirm that the I2C hardware is supported.
-
----
-
-### **2. Enable the I2C Driver in ESP-IDF**
-
-#### **a. Using `menuconfig`**
-Open the configuration menu:
 ```bash
-idf.py menuconfig
+echo ". ~/esp/esp-idf/export.sh" >> ~/.bashrc
+source ~/.bashrc
 ```
-- Navigate to **Component config** → **Driver Config**.
-- Locate **I2C master** and enable **Enable I2C master driver**.
-- Save and exit (`S` followed by `Q`).
 
-#### **b. Verify in `sdkconfig`**
-Ensure the following line is present in your `sdkconfig` file:
-```ini
-CONFIG_I2C_ENABLED=y
+---
+
+### **5. Verify Installation**
+Check if everything is correctly installed:
+
+```bash
+idf.py --version
 ```
 
 ---
 
 ## **Project Commands**
 
-### **Configure the Target Board**
-Set the target to **ESP32-C6** :
+### **1. Clean the Project**
+To remove the `build` directory and clean properly:
+
 ```bash
-idf.py set-target esp32c6   
+rm -rf build/
+idf.py fullclean
 ```
 
-### **Build the Project**
-Compile the project :
+---
+
+### **2. Navigate to the Project Directory**
+Ensure you are in the correct project directory:
+
+```bash
+cd ~/Documents/Corto-Densimeter/Espressif
+```
+
+---
+
+### **3. Set the Target**
+Set the target to ESP32-C6:
+
+```bash
+idf.py set-target esp32c6
+```
+
+---
+
+### **4. Configure Drivers (if needed)**
+To enable I2C and GPIO drivers:
+
+```bash
+idf.py menuconfig
+```
+- Navigate to **Component config** → **Driver Config**.
+- Enable **Enable I2C master driver** and **Enable GPIO driver**.
+- Save and exit (`S` then `Q`).
+
+---
+
+### **5. Build the Project**
+To compile the project:
+
 ```bash
 idf.py build
 ```
 
-### **Find the ESP32-C6 Port**
-List available serial ports to identify the ESP32-C6 :
-```bash
-ls /dev/tty*
-```
-The ESP32-C6 often appears as `/dev/ttyACM0` or `/dev/ttyUSB0`.
+---
 
-### **Flash the Project**
-Upload the compiled binary to the board :
+### **6. Flash and Monitor**
+To flash the project to the board and monitor the serial output:
+
 ```bash
-idf.py -p /dev/ttyACM0 flash
+idf.py -p /dev/ttyACM0 flash monitor
 ```
 
-### **Monitor Serial Output**
-View the serial output of the board :
-```bash
-idf.py -p /dev/ttyACM0 monitor
-```
+---
 
-### **All In One**
+## **Complete and Safe Procedure**
+
+Here is a complete procedure to clean, configure, and compile your project without errors:
 
 ```bash
-cd Espressif
-. ~/esp/v5.5.1/esp-idf/export.sh
-idf.py set-target esp32c6   
+# 1. Navigate to the project directory
+cd ~/Documents/Corto-Densimeter/Espressif
+
+# 2. Clean the project
+rm -rf build/
+idf.py fullclean
+
+# 3. Set the target
+idf.py set-target esp32c6
+
+# 4. Configure drivers (optional, if you need to modify the configuration)
+idf.py menuconfig
+
+# 5. Build
 idf.py build
-idf.py -p /dev/ttyACM0 flash
-idf.py -p /dev/ttyACM0 monitor
+
+# 6. Flash and monitor
+idf.py -p /dev/ttyACM0 flash monitor
 ```
 
+---
+
+## **Troubleshooting**
+
+### **Missing Dependencies Errors**
+If you encounter errors like:
+```
+fatal error: driver/i2c_master.h: No such file or directory
+```
+or
+```
+fatal error: driver/gpio.h: No such file or directory
+```
+- Ensure that the dependencies `esp_driver_i2c` and `esp_driver_gpio` are declared in the `CMakeLists.txt` file in your `main` directory:
+  ```cmake
+  REQUIRES driver esp_driver_i2c esp_driver_gpio
+  ```
+
+---
+
+### **Compilation Issues**
+- Make sure all dependencies are installed.
+- Ensure that the `sdkconfig` file contains:
+  ```ini
+  CONFIG_I2C_ENABLED=y
+  ```
+
+---
+
+## **Additional Notes**
+- If you are using a Docker container or a `.devcontainer`, ensure all dependencies are installed in the containerized environment.
+- For more information, refer to the [official ESP-IDF documentation](https://docs.espressif.com/projects/esp-idf/).
