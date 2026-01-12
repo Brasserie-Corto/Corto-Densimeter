@@ -1,7 +1,7 @@
 {
     "version":            "1.3",
     "project_name":       "CORTO-DENSIMETER",
-    "project_version":    "8bd5cbf-dirty",
+    "project_version":    "573b151-dirty",
     "project_path":       "/home/t70n/Documents/Corto-Densimeter/Espressif",
     "idf_path":           "/home/t70n/esp/esp-idf",
     "build_dir":          "/home/t70n/Documents/Corto-Densimeter/Espressif/build",
@@ -700,8 +700,8 @@
             "managed_reqs": [],
             "managed_priv_reqs": [],
             "file": "/home/t70n/Documents/Corto-Densimeter/Espressif/build/esp-idf/main/libmain.a",
-            "sources": [ "/home/t70n/Documents/Corto-Densimeter/Espressif/main/densimeter_main.c", "/home/t70n/Documents/Corto-Densimeter/Espressif/main/Hardware/I2C/i2c_functions.c", "/home/t70n/Documents/Corto-Densimeter/Espressif/main/Hardware/MPU6050/mpu6050_functions.c", "/home/t70n/Documents/Corto-Densimeter/Espressif/main/Hardware/LED/led_functions.c" ],
-            "include_dirs": [ ".", "Hardware/I2C", "Hardware/MPU6050", "Hardware/LED" ]
+            "sources": [ "/home/t70n/Documents/Corto-Densimeter/Espressif/main/densimeter_main.c", "/home/t70n/Documents/Corto-Densimeter/Espressif/main/Hardware/I2C/i2c_functions.c", "/home/t70n/Documents/Corto-Densimeter/Espressif/main/Hardware/MPU6050/mpu6050_functions.c", "/home/t70n/Documents/Corto-Densimeter/Espressif/main/Hardware/LED/led_functions.c", "/home/t70n/Documents/Corto-Densimeter/Espressif/main/Software/DENSIMETER/densimeter_functions.c" ],
+            "include_dirs": [ ".", "Hardware/I2C", "Hardware/MPU6050", "Hardware/LED", "Software/DENSIMETER" ]
         },
         "mbedtls": {
             "alias": "idf::mbedtls",
@@ -2548,7 +2548,7 @@
             "priv_reqs": [],
             "managed_reqs": [],
             "managed_priv_reqs": [],
-            "include_dirs": [ ".", "Hardware/I2C", "Hardware/MPU6050", "Hardware/LED" ]
+            "include_dirs": [ ".", "Hardware/I2C", "Hardware/MPU6050", "Hardware/LED", "Software/DENSIMETER" ]
         }
     },
     "gdbinit_files": {
