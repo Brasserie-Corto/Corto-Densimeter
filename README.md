@@ -80,21 +80,20 @@ idf.py --version
 
 ## **Project Commands**
 
-### **1. Clean the Project**
+### **1. Navigate to the Project Directory**
+Ensure you are in the correct project directory:
+
+```bash
+cd ~/Documents/Corto-Densimeter/Espressif
+```
+---
+
+### **2. Clean the Project**
 To remove the `build` directory and clean properly:
 
 ```bash
 rm -rf build/
 idf.py fullclean
-```
-
----
-
-### **2. Navigate to the Project Directory**
-Ensure you are in the correct project directory:
-
-```bash
-cd ~/Documents/Corto-Densimeter/Espressif
 ```
 
 ---
@@ -154,7 +153,7 @@ idf.py fullclean
 idf.py set-target esp32c6
 
 # 4. Configure drivers (optional, if you need to modify the configuration)
-idf.py menuconfig
+# idf.py menuconfig
 
 # 5. Build
 idf.py build

@@ -7,6 +7,7 @@
 #include "freertos/task.h"                                                              // Pour les fonctions FreeRTOS
 #include "esp_log.h"                                                                    // Pour les fonctions de log
 #include "driver/gpio.h"                                                                // Pour les fonctions GPIO
+#include "push_functions.h"                                                             // Pour les fonctions de push WiFi
 
 // Définition des broches pour les LEDs et boutons
 #define I2C_MASTER_SCL_IO 2                                                             // GPIO 2 pour MPU6050-SCL
@@ -37,6 +38,9 @@ void handle_error(esp_err_t err, const char *message) {
  * Initialise le bus I2C, les LEDs, et lit en boucle les données du MPU6050.
  */
 void app_main() {
+
+    ESP_ERROR_CHECK(nvs_flash_init());
+
     // Initialisation des handles : ressources abstraites pour I2C et MPU6050
     i2c_master_bus_handle_t i2c_bus = NULL;
     i2c_master_dev_handle_t dev_handle = NULL;
@@ -76,11 +80,28 @@ void app_main() {
     // Éteindre la LED verte après l'initialisation
     gpio_set_level(LED_GREEN_GPIO, 0);
 
+    // Initialisation de la connexion WiFi
+    ret = wifi_init_sta();
+    if (ret != ESP_OK) {
+        handle_error(ret, "Erreur d'initialisation du WiFi");
+        return;
+    }
+
     // Boucle principale
     while (1) {
         gpio_set_level(LED_GREEN_GPIO, 1);
         ret = mpu6050_read_data(dev_handle, i2c_bus, &raw_data);
         if (ret == ESP_OK) {
+            
+            // Afficher les données brutes du gyroscope (optionnel)
+            ESP_LOGI(TAG, "Raw Gyro: X=%d, Y=%d, Z=%d", raw_data.gx, raw_data.gy, raw_data.gz);
+            ret = convert_mpu6050_data(&raw_data, &converted_data);
+            if (ret == ESP_OK) {
+                ESP_LOGI(TAG, "Gyro (°/s): X=%.2f, Y=%.2f, Z=%.2f", converted_data.gx, converted_data.gy, converted_data.gz);
+            } else {
+                ESP_LOGE(TAG, "Erreur de conversion: %s", esp_err_to_name(ret));
+            }
+            
             // Mesurer la profondeur d'immersion
             float depth = measure_immersion_depth(&raw_data);
 
@@ -95,14 +116,12 @@ void app_main() {
             ESP_LOGI(TAG, "Densité estimée: %.3f kg/m³", current_density);
             ESP_LOGI(TAG, "Degré d'alcool estimé: %.2f %%", alcohol_percentage);
 
-            // Afficher les données brutes du gyroscope (optionnel)
-            ESP_LOGI(TAG, "Raw Gyro: X=%d, Y=%d, Z=%d", raw_data.gx, raw_data.gy, raw_data.gz);
-            ret = convert_mpu6050_data(&raw_data, &converted_data);
-            if (ret == ESP_OK) {
-                ESP_LOGI(TAG, "Gyro (°/s): X=%.2f, Y=%.2f, Z=%.2f", converted_data.gx, converted_data.gy, converted_data.gz);
-            } else {
-                ESP_LOGE(TAG, "Erreur de conversion: %s", esp_err_to_name(ret));
+            // Envoyer les données via WiFi
+            int wifi_push_status = wifi_push(depth, current_density, alcohol_percentage);
+            if (wifi_push_status != 200) {
+                ESP_LOGE(TAG, "Erreur d'envoi des données WiFi: Code %d", wifi_push_status);
             }
+
         } else {
             handle_error(ret, "Erreur de lecture du MPU6050");
         }

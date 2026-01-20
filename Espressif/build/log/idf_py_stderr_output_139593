@@ -1,9 +1,0 @@
-Command: cmake -G Ninja -B /home/t70n/Documents/Corto-Densimeter/Espressif/build -DPYTHON_DEPS_CHECKED=1 -DPYTHON=/home/t70n/.espressif/python_env/idf6.1_py3.12_env/bin/python -DESP_PLATFORM=1 -DCCACHE_ENABLE=False /home/t70n/Documents/Corto-Densimeter/Espressif
-Configuration Report               
- ───────────────────────────────── 
-   Parser Version: 1               
-   Verbosity: default              
-   Defaults policy: sdkconfig      
-   Status: Finished successfully   
-                                   
- ───────────────────────────────── 
