@@ -11,4 +11,4 @@ idf_component_register(
                     "Hardware/LED"
                     "Software/DENSIMETER"
                     "Software/PUSH"
-    REQUIRES driver esp_driver_i2c esp_driver_gpio esp_wifi esp_netif esp_http_client nvs_flash)
+    REQUIRES driver esp_driver_i2c esp_driver_gpio esp_wifi esp_netif esp_http_client nvs_flash mbedtls)

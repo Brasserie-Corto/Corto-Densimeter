@@ -1,8 +1,10 @@
 // Définition des macros pour inclure les en-têtes nécessaires
+#include <stdbool.h>
 #include "i2c_functions.h"                                                              // Pour les fonctions I2C
 #include "mpu6050_functions.h"                                                          // Pour les fonctions MPU6050
 #include "led_functions.h"                                                              // Pour les fonctions LED
 #include "densimeter_functions.h"                                                       // Pour les fonctions Densimeter
+#include "nvs_flash.h"
 #include "freertos/FreeRTOS.h"                                                          // Pour les définitions FreeRTOS
 #include "freertos/task.h"                                                              // Pour les fonctions FreeRTOS
 #include "esp_log.h"                                                                    // Pour les fonctions de log
@@ -47,6 +49,10 @@ void app_main() {
 
     mpu6050_raw_t raw_data;
     mpu6050_converted_t converted_data;
+
+    // Référence d'enfoncement : az mesuré au début (capteur à l'équilibre)
+    float az_reference = 0.0f;
+    bool az_reference_set = false;
 
     // Initialisation des LEDs
     esp_err_t ret = leds_init(LED_GREEN_GPIO, LED_RED_GPIO);
@@ -102,24 +108,37 @@ void app_main() {
                 ESP_LOGE(TAG, "Erreur de conversion: %s", esp_err_to_name(ret));
             }
             
-            // Mesurer la profondeur d'immersion
-            float depth = measure_immersion_depth(&raw_data);
+            // Mesurer l'accélération sur Z en g
+            float az_current = get_az_value(&raw_data);
 
-            // Estimer la densité à partir de la profondeur
-            float current_density = estimate_density_from_depth(depth);
+            // Définir la référence à la première mesure (capteur au repos dans le liquide)
+            if (!az_reference_set) {
+                az_reference = az_current;
+                az_reference_set = true;
+                ESP_LOGI(TAG, "Référence az_initial définie: %.3f g", az_reference);
+                gpio_set_level(LED_GREEN_GPIO, 0);
+                vTaskDelay(1000 / portTICK_PERIOD_MS);
+                continue; // Attendre la prochaine boucle pour calculer l'enfoncement
+            }
 
-            // Estimer le degré d'alcool
-            float alcohol_percentage = estimate_alcohol_percentage_from_depth(INITIAL_DENSITY, current_density);
+            // Calculer l'enfoncement (différence de poussée)
+            float immersion_delta = calculate_immersion_delta(az_reference, az_current);
+
+            // Estimer la densité à partir de l'enfoncement (relation à étalonner)
+            float current_density = estimate_density_from_immersion(immersion_delta);
+
+            // Calculer le degré d'alcool
+            float alcohol_percentage = calculate_alcohol_percentage(INITIAL_DENSITY, current_density);
 
             // Afficher les résultats
-            ESP_LOGI(TAG, "Profondeur d'immersion: %.2f mm", depth);
-            ESP_LOGI(TAG, "Densité estimée: %.3f kg/m³", current_density);
+            ESP_LOGI(TAG, "az actuel: %.3f g | delta: %.3f", az_current, immersion_delta);
+            ESP_LOGI(TAG, "Densité estimée: %.3f", current_density);
             ESP_LOGI(TAG, "Degré d'alcool estimé: %.2f %%", alcohol_percentage);
 
-            // Envoyer les données via WiFi
-            int wifi_push_status = wifi_push(depth, current_density, alcohol_percentage);
-            if (wifi_push_status != 200) {
-                ESP_LOGE(TAG, "Erreur d'envoi des données WiFi: Code %d", wifi_push_status);
+            // Envoyer les données via WiFi (on envoie le delta comme profondeur relative)
+            esp_err_t wifi_push_status = wifi_push(immersion_delta, current_density, alcohol_percentage);
+            if (wifi_push_status != ESP_OK) {
+                ESP_LOGE(TAG, "Erreur d'envoi des données WiFi: %s", esp_err_to_name(wifi_push_status));
             }
 
         } else {

@@ -142,23 +142,10 @@ idf.py -p /dev/ttyACM0 flash monitor
 Here is a complete procedure to clean, configure, and compile your project without errors:
 
 ```bash
-# 1. Navigate to the project directory
 cd ~/Documents/Corto-Densimeter/Espressif
-
-# 2. Clean the project
-rm -rf build/
-idf.py fullclean
-
-# 3. Set the target
+rm -rf build/ sdkconfig
 idf.py set-target esp32c6
-
-# 4. Configure drivers (optional, if you need to modify the configuration)
-# idf.py menuconfig
-
-# 5. Build
 idf.py build
-
-# 6. Flash and monitor
 idf.py -p /dev/ttyACM0 flash monitor
 ```
 
