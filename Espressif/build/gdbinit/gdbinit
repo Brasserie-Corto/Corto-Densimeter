@@ -1,0 +1,2 @@
+source /home/t70n/Documents/Corto-Densimeter/Espressif/build/gdbinit/symbols
+source /home/t70n/Documents/Corto-Densimeter/Espressif/build/gdbinit/connect
