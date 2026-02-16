@@ -1,6 +1,47 @@
 # Corto-Densimeter
 
-DIY densimeter for Corto Brewery use cases.
+**DIY densimeter for Corto Brewery use cases.**
+
+---
+
+## Project Context
+
+The **Corto Densimeter** project was developed to address the need for a **DIY density sensor solution**. This sensor aims to calculate the **alcohol content** in beer by measuring how deeply the sensor is submerged. The submersion depth is determined using a **gyroscope**.
+
+The project reached the following milestones:
+- **Alcohol content calculation** is functional but **not tested in real-world conditions**. Further testing and calibration are required.
+- **Hardware wiring** is fully operational and **battery-powered**.
+
+**Note:** The project was **abandoned** at the end of thedevelopment process due to **safety concerns**, particularly the **fire risk** associated with lithium batteries.  The code is left as-is at the end of development and has not been cleaned up. Use with caution.
+
+---
+
+## Project Photos
+ | ![Photo 1](./Documentation/img/IMG_7566.JPG) | ![Photo 2](./Documentation/img/IMG_7570.JPG) |
+ |-----------------------|-----------------------|
+ | ![Photo 3](./Documentation/img/IMG_7574.JPG) | ![Photo 4](./Documentation/img/IMG_7575.JPG) |
+
+---
+
+### Example CLI Output
+
+```plaintext
+I (5595) MAIN: Raw Gyro: X=869, Y=6167, Z=-3011
+I (5595) MAIN: Gyro (°/s): X=6.63, Y=47.08, Z=-22.98
+I (6605) MAIN: Profondeur d'immersion: 8.34 mm
+I (6605) MAIN: Densité estimée: 1.017 kg/m³
+I (6605) MAIN: Degré d'alcool estimé: 4.36 %
+I (6605) MAIN: Raw Gyro: X=-141, Y=222, Z=142
+I (6605) MAIN: Gyro (°/s): X=-1.08, Y=1.69, Z=1.08
+I (7615) MAIN: Profondeur d'immersion: 8.70 mm
+I (7615) MAIN: Densité estimée: 1.013 kg/m³
+I (7615) MAIN: Degré d'alcool estimé: 4.85 %
+I (7615) MAIN: Raw Gyro: X=-457, Y=248, Z=181
+I (7615) MAIN: Gyro (°/s): X=-3.49, Y=1.89, Z=1.38
+I (8625) MAIN: Profondeur d'immersion: 8.76 mm
+I (8625) MAIN: Densité estimée: 1.012 kg/m³
+I (8625) MAIN: Degré d'alcool estimé: 4.93 %
+```
 
 ---
 
@@ -9,7 +50,7 @@ DIY densimeter for Corto Brewery use cases.
 ---
 
 ## **Prerequisites**
-- **Operating System**: Ubuntu 24 (or any Linux-based system).
+- **Operating System**: Ubuntu 24
 - **ESP-IDF Version**: v6.1.
 - **Python**: Python 3.6 or later.
 - **Hardware**: ESP32-C6-DevKitC-1 board.
