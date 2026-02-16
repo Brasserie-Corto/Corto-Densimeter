@@ -6,7 +6,7 @@
 
 ## Project Context
 
-The **Corto Densimeter** project was developed to address the need for a **DIY density sensor solution**. This sensor aims to calculate the **alcohol content** in beer by measuring how deeply the sensor is submerged. The submersion depth is determined using a **gyroscope**.
+The **Corto Densimeter** project was developed to address the need for a **DIY density sensor solution**. This sensor aims to calculate the **alcohol content** in beer by measuring how deeply the sensor is submerged, and send the data via API. The submersion depth is determined using a **gyroscope**. The device is connected to internet via WiFi.
 
 The project reached the following milestones:
 - **Alcohol content calculation** is functional but **not tested in real-world conditions**. Further testing and calibration are required.
